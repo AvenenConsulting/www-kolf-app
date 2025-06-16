@@ -1,0 +1,71 @@
+{
+  "CallerReference": "kolf-avenen-com-2025-06-16",
+  "Aliases": {
+    "Quantity": 2,
+    "Items": [
+      "kolf.avenen.com",
+      "www.kolf.avenen.com"
+    ]
+  },
+  "DefaultRootObject": "index.html",
+  "Comment": "KOLF Marketing Website - Static hosting with S3",
+  "Enabled": true,
+  "Origins": {
+    "Quantity": 1,
+    "Items": [
+      {
+        "Id": "S3-kolf.avenen.com-production",
+        "DomainName": "kolf.avenen.com-production.s3.ap-southeast-1.amazonaws.com",
+        "CustomOriginConfig": {
+          "HTTPPort": 80,
+          "HTTPSPort": 443,
+          "OriginProtocolPolicy": "http-only",
+          "OriginSslProtocols": {
+            "Quantity": 1,
+            "Items": ["TLSv1.2"]
+          }
+        }
+      }
+    ]
+  },
+  "DefaultCacheBehavior": {
+    "TargetOriginId": "S3-kolf.avenen.com-production",
+    "ViewerProtocolPolicy": "redirect-to-https",
+    "MinTTL": 0,
+    "ForwardedValues": {
+      "QueryString": false,
+      "Cookies": {
+        "Forward": "none"
+      }
+    },
+    "TrustedSigners": {
+      "Enabled": false,
+      "Quantity": 0
+    },
+    "Compress": true
+  },
+  "CustomErrorResponses": {
+    "Quantity": 2,
+    "Items": [
+      {
+        "ErrorCode": 403,
+        "ResponsePagePath": "/index.html",
+        "ResponseCode": "200",
+        "ErrorCachingMinTTL": 300
+      },
+      {
+        "ErrorCode": 404,
+        "ResponsePagePath": "/index.html", 
+        "ResponseCode": "200",
+        "ErrorCachingMinTTL": 300
+      }
+    ]
+  },
+  "PriceClass": "PriceClass_100",
+  "ViewerCertificate": {
+    "ACMCertificateArn": "arn:aws:acm:us-east-1:551302117868:certificate/9c681c30-e0e7-4ddb-9296-09da63b96eb3",
+    "SSLSupportMethod": "sni-only",
+    "MinimumProtocolVersion": "TLSv1.2_2021"
+  },
+  "HttpVersion": "http2"
+}

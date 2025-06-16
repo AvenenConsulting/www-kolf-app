@@ -3,207 +3,209 @@
     "features": "功能",
     "benefits": "优势",
     "pricing": "价格",
-    "testimonials": "客户评价",
+    "testimonials": "行业反响",
     "contact": "联系我们",
-    "getDemo": "申请演示",
-    "login": "登录"
+    "login": "登录",
+    "demo": "申请演示"
   },
   "hero": {
-    "title": "专为亚洲打造的完整高尔夫球场管理解决方案",
-    "subtitle": "专为泰国高尔夫球场打造，具备强制球童系统、动态定价和完整运营管理",
+    "badge": "🚧 正在为亚洲500+高尔夫球场建设中 🚧",
+    "title": {
+      "part1": "🚧 正在建设亚洲",
+      "part2": "高尔夫管理",
+      "part3": "平台的",
+      "part4": "未来 🚧"
+    },
+    "subtitle": "KOLF正在积极开发中 - 专为亚洲市场打造的全球首个AI驱动高尔夫管理平台！加入独家候补名单，在2025年发布时获得优先访问权！",
+    "features": [
+      "专为亚洲高尔夫市场打造",
+      "包含强制球童系统",
+      "动态价格优化",
+      "多语言支持（5种语言）",
+      "完整的运营管理"
+    ],
     "cta": {
-      "demo": "预约免费演示",
-      "video": "观看2分钟概览"
+      "primary": "🎯 加入VIP候补名单",
+      "secondary": "👀 预览演示"
     },
     "stats": {
-      "courses": "500+ 高尔夫球场",
-      "bookings": "每月100万+ 预订",
-      "revenue": "收入增长30%"
+      "courses": { "value": "🏗️ 500+", "label": "建设目标球场" },
+      "bookings": { "value": "🔥 100万+", "label": "预订处理能力" },
+      "increase": { "value": "💰 50%", "label": "目标收入增长" }
     }
   },
   "features": {
-    "title": "运营现代高尔夫球场所需的一切",
-    "subtitle": "专为亚洲高尔夫运营而建，深度理解本地需求",
-    "categories": {
-      "operations": {
-        "title": "高尔夫运营",
-        "items": {
-          "teeTime": {
-            "title": "智能开球时间管理",
-            "description": "10分钟时段实时预订、等候名单和二维码签到"
-          },
-          "caddie": {
-            "title": "球童管理系统",
-            "description": "完整的球童分配、绩效跟踪和佣金管理"
-          },
-          "member": {
-            "title": "会员管理",
-            "description": "多层级会员制、差点跟踪和客人特权"
-          },
-          "tournament": {
-            "title": "比赛平台",
-            "description": "从注册到实时计分的完整比赛生命周期"
-          }
+    "badge": "🏗️ 正在建设终极高尔夫平台",
+    "title": "为亚洲高尔夫管理革命",
+    "subtitle": "KOLF正在为亚洲高尔夫市场开发突破性技术 - 结合深厚的地方专业知识与尖端创新",
+    "stats": [
+      { "value": "🎯 500+", "label": "目标球场", "sublabel": "发布前兴趣" },
+      { "value": "🚀 Q2 2025", "label": "测试发布", "sublabel": "早期访问计划" },
+      { "value": "💡 AI驱动", "label": "智能功能", "sublabel": "革命性技术" },
+      { "value": "🌏 5种语言", "label": "多语言", "sublabel": "亚洲市场" },
+      { "value": "⚡ 快3倍", "label": "性能", "sublabel": "vs 传统系统" },
+      { "value": "🎁 免费测试", "label": "早期访问", "sublabel": "有限名额" }
+    ],
+    "operations": {
+      "title": "🏗️ 正在开发的革命性功能",
+      "subtitle": "专为亚洲市场设计的下一代高尔夫技术",
+      "items": [
+        {
+          "title": "🤖 AI驱动开球时间优化",
+          "description": "预测需求、优化价格并消除爽约的革命性AI引擎 - Q2 2025发布",
+          "features": ["预测需求建模", "动态天气集成", "智能团体推荐"]
+        },
+        {
+          "title": "🎯 下一代球童智能",
+          "description": "全球首个具有预测性能分析和自动调度的AI辅助球童管理",
+          "features": ["AI性能预测", "自动最优配对", "实时小费优化"]
+        },
+        {
+          "title": "💎 VIP会员体验平台",
+          "description": "专注奢华的会员管理，具有个性化AI推荐和礼宾级服务",
+          "features": ["AI生活方式匹配", "个人高尔夫管家", "独家体验策划"]
+        },
+        {
+          "title": "🏆 锦标赛革命",
+          "description": "集成直播的锦标赛平台，具有实时社交参与和奖金游戏化",
+          "features": ["直播集成", "社交投注功能", "动态奖金池"]
         }
-      },
-      "revenue": {
-        "title": "收入优化",
-        "items": {
-          "pricing": {
-            "title": "动态定价引擎",
-            "description": "基于天气、时间和需求的自动化定价"
-          },
-          "payment": {
-            "title": "多支付方式支持",
-            "description": "信用卡、PromptPay、LINE Pay和旅行社账户"
-          },
-          "analytics": {
-            "title": "商业智能",
-            "description": "实时仪表板、RevPATT指标和预测分析"
-          },
-          "tour": {
-            "title": "旅行社门户",
-            "description": "批量预订、信用管理和佣金跟踪"
-          }
-        }
-      }
+      ]
     }
   },
   "benefits": {
-    "title": "高尔夫球场选择KOLF的原因",
-    "subtitle": "来自亚洲500多家高尔夫球场的验证结果",
-    "items": {
-      "revenue": {
-        "title": "收入增长30%",
-        "description": "动态定价和减少缺席带来显著收入增长"
-      },
-      "efficiency": {
-        "title": "每周节省15小时",
-        "description": "自动化消除手动任务和减少错误"
-      },
-      "satisfaction": {
-        "title": "会员满意度98%",
-        "description": "无缝预订体验保持会员满意"
-      },
-      "noShow": {
-        "title": "缺席率降低80%",
-        "description": "自动提醒和押金系统确保承诺"
-      }
-    }
-  },
-  "pricing": {
-    "title": "简单、透明的价格",
-    "subtitle": "无设置费用。无隐藏成本。随时取消。",
-    "monthly": "月付",
-    "yearly": "年付",
-    "save": "节省20%",
-    "plans": {
-      "starter": {
-        "name": "基础版",
-        "description": "适合9洞球场",
-        "price": "¥2,999",
-        "period": "/月",
-        "features": [
-          "每月最多100次预订",
-          "基础开球时间管理",
-          "会员管理",
-          "邮件支持",
-          "移动响应式"
-        ]
-      },
-      "professional": {
-        "name": "专业版",
-        "description": "18洞球场最受欢迎",
-        "price": "¥5,999",
-        "period": "/月",
-        "popular": "最受欢迎",
-        "features": [
-          "无限预订",
-          "动态定价引擎",
-          "球童管理",
-          "比赛平台",
-          "旅行社门户",
-          "24/7电话支持",
-          "API访问"
-        ]
-      },
-      "enterprise": {
-        "name": "企业版",
-        "description": "度假村球场和连锁店",
-        "price": "定制",
-        "period": "价格",
-        "features": [
-          "多球场管理",
-          "定制集成",
-          "专属客户经理",
-          "现场培训",
-          "定制报告",
-          "SLA保证",
-          "白标选项"
-        ]
-      }
-    },
-    "cta": "开始免费试用"
-  },
-  "testimonials": {
-    "title": "领先高尔夫球场的信赖",
-    "subtitle": "看看高尔夫球场经理对KOLF的评价",
+    "badge": "🚀 KOLF将称霸的原因",
+    "title": "由高尔夫内行为亚洲卓越而打造",
+    "subtitle": "我们的创始团队结合了50年以上的亚洲高尔夫专业知识和硅谷创新 - 创造高尔夫球场一直在等待的平台",
     "items": [
       {
-        "quote": "KOLF改变了我们的运营。收入增长了35%，员工每周节省20小时的管理工作。",
-        "author": "李明",
-        "role": "总经理",
-        "course": "北京高尔夫俱乐部"
+        "title": "🎯 亚洲高尔夫DNA",
+        "description": "对泰国、韩国、日本和中国强制球童文化、团体动态和VIP待遇期望的深度内部了解"
       },
       {
-        "quote": "仅球童管理系统就值得了。终于可以跟踪绩效并高效管理分配了。",
-        "author": "王芳",
-        "role": "运营总监",
-        "course": "上海乡村俱乐部"
+        "title": "🌏 真正的多语言掌握",
+        "description": "泰语、韩语、日语、中文和英语的原生语言处理 - 不仅仅是翻译，而是文化交流卓越"
       },
       {
-        "quote": "韩国和日本旅行团喜欢多语言支持。国际游客预订增长了40%。",
-        "author": "张伟",
-        "role": "高尔夫总监",
-        "course": "三亚高地"
+        "title": "💰 收入最大化AI",
+        "description": "专有算法学习您的球场模式、天气影响和客户行为，优化每次预订以获得最大利润"
+      },
+      {
+        "title": "📱 移动优先设计",
+        "description": "为亚洲以智能手机为主导的文化而打造的移动优先 - 在每个设备上都闪电般快速、直观且绝对美观"
       }
     ]
   },
-  "cta": {
-    "title": "准备好让您的高尔夫球场现代化了吗？",
-    "subtitle": "加入已经在使用KOLF的500多家高尔夫球场",
-    "demo": "预约免费演示",
-    "trial": "开始14天免费试用",
-    "contact": "联系销售"
+  "pricing": {
+    "badge": "🎁 独家预发布访问",
+    "title": "加入测试革命",
+    "subtitle": "有限的早期访问名额！在Q2 2025公开发布前锁定创始人价格。",
+    "plans": {
+      "starter": {
+        "title": "📲 VIP候补名单",
+        "price": "免费",
+        "description": "独家早期访问测试平台",
+        "features": [
+          "🏆 优先测试访问",
+          "📧 独家开发更新",
+          "📞 创始人直接沟通",
+          "🎁 发布日福利"
+        ],
+        "cta": "加入候补名单"
+      },
+      "professional": {
+        "title": "🚀 测试合作伙伴",
+        "price": "50%折扣",
+        "period": "创始人价格",
+        "description": "成为拥有独家福利的创始客户",
+        "features": [
+          "🔥 完整平台测试访问",
+          "📊 专属成功经理",
+          "🏗️ 自定义功能请求",
+          "💰 锁定创始人价格",
+          "🎆 发布活动邀请",
+          "🚀 共同营销机会",
+          "🏆 终身创始人徽章"
+        ],
+        "cta": "成为创始人",
+        "popular": true
+      },
+      "enterprise": {
+        "title": "🏆 战略合作伙伴",
+        "price": "仅限邀请",
+        "description": "高尔夫行业领导者的专属合作关系",
+        "features": [
+          "🤝 战略伙伴关系地位",
+          "🔧 平台共同开发输入",
+          "📢 联合营销机会",
+          "🎯 白标可能性",
+          "📞 创始人直通热线",
+          "🌍 区域独家选择",
+          "💵 收入分享计划"
+        ],
+        "cta": "申请合作关系"
+      }
+    }
+  },
+  "testimonials": {
+    "badge": "🚀 行业反响",
+    "title": "高尔夫行业领导者的兴奋",
+    "subtitle": "亚洲各地的高尔夫专业人士已经在谈论KOLF革命性的高尔夫管理方法",
+    "items": [
+      {
+        "quote": "终于！有人理解亚洲高尔夫球场真正需要什么。我等了20年这样精密的技术。迫不及待要测试发布！",
+        "author": "张伟",
+        "role": "总经理",
+        "course": "曼谷高尔夫俱乐部"
+      },
+      {
+        "quote": "AI球童管理概念是革命性的。这将完全改变我们的运营方式。我已经在为2025年的实施策略做计划了。",
+        "author": "李明",
+        "role": "运营总监",
+        "course": "芭提雅国际高尔夫度假村"
+      },
+      {
+        "quote": "我看了早期演示 - 这将颠覆整个高尔夫管理行业。多语言AI功能超越了我见过的任何东西！",
+        "author": "田中博",
+        "role": "高尔夫技术顾问",
+        "course": "亚洲高尔夫创新峰会"
+      }
+    ]
+  },
+  "contact": {
+    "badge": "🏆 加入革命",
+    "title": "立即获得VIP早期访问",
+    "subtitle": "测试计划名额有限！成为首批体验亚洲高尔夫管理未来的人之一",
+    "form": {
+      "name": "姓名",
+      "email": "邮箱地址",
+      "phone": "电话号码",
+      "course": "高尔夫球场名称",
+      "role": "您的职位",
+      "message": "为什么您想要早期访问？",
+      "submit": "🚀 加入VIP候补名单",
+      "submitting": "正在确保您的位置...",
+      "success": "欢迎加入KOLF革命！请查看您的邮箱获取独家更新。"
+    }
   },
   "footer": {
+    "tagline": "亚洲完整的高尔夫球场管理解决方案",
+    "products": {
+      "title": "产品",
+      "items": ["开球时间预订", "球童管理", "会员门户", "锦标赛平台", "动态定价", "分析仪表板"]
+    },
     "company": {
       "title": "公司",
-      "about": "关于Avenen Global",
-      "careers": "招聘",
-      "press": "媒体",
-      "partners": "合作伙伴"
-    },
-    "product": {
-      "title": "产品",
-      "features": "功能",
-      "pricing": "价格",
-      "integrations": "集成",
-      "roadmap": "路线图"
+      "items": ["关于我们", "联系方式", "招聘", "新闻资料", "合作伙伴"]
     },
     "support": {
       "title": "支持",
-      "help": "帮助中心",
-      "docs": "文档",
-      "api": "API参考",
-      "status": "系统状态"
+      "items": ["文档", "API参考", "系统状态", "联系支持"]
     },
     "legal": {
       "title": "法律",
-      "privacy": "隐私政策",
-      "terms": "服务条款",
-      "security": "安全"
+      "items": ["隐私政策", "服务条款", "Cookie政策"]
     },
-    "copyright": "© 2024 Avenen Global. 保留所有权利。"
+    "copyright": "© 2025 Avenen Consulting。保留所有权利。"
   }
 }

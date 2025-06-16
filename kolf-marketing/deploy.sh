@@ -6,8 +6,8 @@ set -e
 echo "🚀 Starting KOLF Marketing Website Deployment..."
 
 # Configuration
-BUCKET_NAME="kolf.avenen.com-production"
-CLOUDFRONT_DISTRIBUTION_ID=""
+BUCKET_NAME="kolf.app-production"
+CLOUDFRONT_DISTRIBUTION_ID="E3509NXA3EEV2A"
 AWS_REGION="ap-southeast-1"
 
 # Build the application
@@ -27,4 +27,4 @@ if [ ! -z "$CLOUDFRONT_DISTRIBUTION_ID" ]; then
 fi
 
 echo "✅ Deployment completed successfully!"
-echo "🌐 Website URL: https://kolf.avenen.com"
+echo "🌐 Website URL: https://kolf.app"

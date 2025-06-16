@@ -265,7 +265,7 @@ Expected Core Web Vitals:
 
 ## 📝 License
 
-This project is proprietary to Avenen Global.
+This project is proprietary to Avenen Consulting.
 
 ## 📞 Support
 
@@ -276,4 +276,4 @@ For technical support or questions:
 
 ---
 
-Built with ❤️ by the Avenen Global team for the golf industry.
+Built with ❤️ by the Avenen Consulting team for the golf industry.

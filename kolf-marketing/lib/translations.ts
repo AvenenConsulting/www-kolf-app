@@ -13,14 +13,14 @@ export const translations = {
     
     // Hero Section
     hero: {
-      badge: "Trusted by 500+ Golf Courses Across Asia",
+      badge: "🚧 Building for 500+ Golf Courses Across Asia 🚧",
       title: {
-        part1: "The Complete",
-        part2: "Golf Course",
-        part3: "Management Solution for",
-        part4: "Asia"
+        part1: "🚧 Building the Future",
+        part2: "Golf Management",
+        part3: "Platform for",
+        part4: "Asia 🚧"
       },
-      subtitle: "Purpose-built for Thai golf courses with mandatory caddie systems, dynamic pricing, and complete operational management",
+      subtitle: "KOLF is currently in active development - the world's first AI-powered golf management platform built exclusively for Asian markets. Join our exclusive waitlist to be first in line when we launch in 2025!",
       features: [
         "Purpose-built for Asian golf markets",
         "Mandatory caddie system included",
@@ -29,52 +29,52 @@ export const translations = {
         "Complete operational management"
       ],
       cta: {
-        primary: "Schedule Free Demo",
-        secondary: "Watch 2-min Overview"
+        primary: "🎯 Join VIP Waitlist",
+        secondary: "👀 Sneak Peek Demo"
       },
       stats: {
-        courses: { value: "500+", label: "Golf Courses" },
-        bookings: { value: "1M+", label: "Monthly Bookings" },
-        increase: { value: "30%", label: "Revenue Increase" }
+        courses: { value: "🏗️ 500+", label: "Building for Courses" },
+        bookings: { value: "🔥 1M+", label: "Engineered for Bookings" },
+        increase: { value: "💰 50%", label: "Targeting Revenue Boost" }
       }
     },
     
     // Features Section
     features: {
-      badge: "Complete Golf Management Solution",
-      title: "Everything You Need to Run a Modern Golf Course",
-      subtitle: "Built specifically for Asian golf operations with deep understanding of local requirements",
+      badge: "🏗️ Building the Ultimate Golf Platform",
+      title: "Revolutionizing Golf Management for Asia",
+      subtitle: "KOLF is engineering breakthrough technology specifically for Asian golf markets - combining deep local expertise with cutting-edge innovation",
       stats: [
-        { value: "500+", label: "Golf Courses", sublabel: "Across Asia" },
-        { value: "1M+", label: "Monthly Bookings", sublabel: "Processed seamlessly" },
-        { value: "99.9%", label: "Uptime", sublabel: "Guaranteed SLA" },
-        { value: "30%", label: "Revenue Increase", sublabel: "Average improvement" },
-        { value: "80%", label: "No-show Reduction", sublabel: "Through automation" },
-        { value: "15hrs", label: "Time Saved", sublabel: "Per week per course" }
+        { value: "🎯 500+", label: "Target Courses", sublabel: "Pre-launch Interest" },
+        { value: "🚀 Q2 2025", label: "Beta Launch", sublabel: "Early Access Program" },
+        { value: "💡 AI-Powered", label: "Smart Features", sublabel: "Revolutionary Tech" },
+        { value: "🌏 5 Languages", label: "Multi-Lingual", sublabel: "Asian Markets" },
+        { value: "⚡ 3x Faster", label: "Performance", sublabel: "vs Traditional Systems" },
+        { value: "🎁 Free Beta", label: "Early Access", sublabel: "Limited Spots Available" }
       ],
       operations: {
-        title: "Golf Operations",
-        subtitle: "Complete operational management built for Asian golf markets",
+        title: "🏗️ Revolutionary Features in Development",
+        subtitle: "Next-generation golf technology being engineered specifically for Asian markets",
         items: [
           {
-            title: "Smart Tee Time Management",
-            description: "Real-time booking with 10-minute slots, waitlists, and QR check-in system",
-            features: ["Real-time availability", "Group booking support", "Mobile-responsive interface"]
+            title: "🤖 AI-Powered Tee Time Optimization",
+            description: "Revolutionary AI engine that predicts demand, optimizes pricing, and eliminates no-shows - launching Q2 2025",
+            features: ["Predictive demand modeling", "Dynamic weather integration", "Smart group recommendations"]
           },
           {
-            title: "Caddie Management System", 
-            description: "Complete caddie assignment, performance tracking, and commission management",
-            features: ["5-star rating system", "Block caddie assignment", "Commission calculations"]
+            title: "🎯 Next-Gen Caddie Intelligence",
+            description: "World's first AI-assisted caddie management with predictive performance analytics and automated scheduling",
+            features: ["AI performance predictions", "Automated optimal pairing", "Real-time tip optimization"]
           },
           {
-            title: "Member Management",
-            description: "Multi-tier memberships, handicap tracking, and guest privileges",
-            features: ["WHS handicap compliance", "Multiple membership tiers", "Guest pass management"]
+            title: "💎 VIP Member Experience Platform",
+            description: "Luxury-focused member management with personalized AI recommendations and concierge-level service",
+            features: ["AI lifestyle matching", "Personal golf butler", "Exclusive experience curation"]
           },
           {
-            title: "Tournament Platform",
-            description: "Full tournament lifecycle from registration to live scoring",
-            features: ["Online registration", "Live leaderboards", "Prize distribution"]
+            title: "🏆 Tournament Revolution",
+            description: "Live-streaming integrated tournament platform with real-time social engagement and prize gamification",
+            features: ["Live stream integration", "Social betting features", "Dynamic prize pools"]
           }
         ]
       }
@@ -82,124 +82,124 @@ export const translations = {
     
     // Benefits Section
     benefits: {
-      badge: "Why Choose KOLF",
-      title: "Designed for Thai Golf Courses",
-      subtitle: "Every feature built with deep understanding of Asian golf market requirements",
+      badge: "🚀 Why KOLF Will Dominate",
+      title: "Built by Golf Insiders for Asian Excellence",
+      subtitle: "Our founding team combines 50+ years of Asian golf expertise with Silicon Valley innovation - creating the platform golf courses have been waiting for",
       items: [
         {
-          title: "Built for Asian Markets",
-          description: "Deep understanding of mandatory caddie systems, group bookings, and local payment preferences"
+          title: "🎯 Asian Golf DNA",
+          description: "Deep insider knowledge of mandatory caddie culture, group dynamics, and VIP treatment expectations across Thailand, Korea, Japan, and China"
         },
         {
-          title: "True Multilingual Support",
-          description: "Native support for Thai, English, Korean, Japanese, and Chinese with proper character encoding"
+          title: "🌏 True Multilingual Mastery",
+          description: "Native language processing for Thai, Korean, Japanese, Chinese, and English - not just translation but cultural communication excellence"
         },
         {
-          title: "Dynamic Pricing Engine",
-          description: "Maximize revenue with smart pricing based on demand, weather, and historical data"
+          title: "💰 Revenue Maximization AI",
+          description: "Proprietary algorithms that learn your course patterns, weather impacts, and customer behavior to optimize every booking for maximum profit"
         },
         {
-          title: "Mobile-First Design",
-          description: "Beautiful, fast mobile experience for both staff and customers"
+          title: "📱 Mobile-Obsessed Design",
+          description: "Built mobile-first for Asia's smartphone-dominant culture - lightning-fast, intuitive, and absolutely gorgeous on every device"
         }
       ]
     },
     
     // Pricing Section
     pricing: {
-      badge: "Simple, Transparent Pricing",
-      title: "Choose Your Plan",
-      subtitle: "Start free, scale as you grow. No hidden fees, cancel anytime.",
+      badge: "🎁 Exclusive Pre-Launch Access",
+      title: "Join the Beta Revolution",
+      subtitle: "Limited early access spots available! Lock in founder pricing before public launch in Q2 2025.",
       plans: {
         starter: {
-          title: "Starter",
-          price: "Free",
-          description: "Perfect for small golf courses getting started",
+          title: "📲 VIP Waitlist",
+          price: "FREE",
+          description: "Exclusive early access to beta platform",
           features: [
-            "Up to 50 bookings/month",
-            "Basic tee time management",
-            "Member database",
-            "Email support"
+            "🏆 Priority beta access",
+            "📧 Exclusive development updates",
+            "📞 Direct founder communication",
+            "🎁 Launch day benefits"
           ],
-          cta: "Get Started"
+          cta: "Join Waitlist"
         },
         professional: { 
-          title: "Professional", 
-          price: "฿4,999",
-          period: "/month",
-          description: "Everything you need for a thriving golf course",
+          title: "🚀 Beta Partner", 
+          price: "50% OFF",
+          period: "founder pricing",
+          description: "Become a founding customer with exclusive benefits",
           features: [
-            "Unlimited bookings",
-            "Advanced tee time & caddie management",
-            "Dynamic pricing engine",
-            "Tournament platform",
-            "API access",
-            "Priority support",
-            "Custom branding"
+            "🔥 Full platform beta access",
+            "📊 Dedicated success manager",
+            "🏗️ Custom feature requests",
+            "💰 Locked-in founder pricing",
+            "🎆 Launch event invitation",
+            "🚀 Co-marketing opportunities",
+            "🏆 Lifetime founder badge"
           ],
-          cta: "Get Started",
+          cta: "Become Founder",
           popular: true
         },
         enterprise: {
-          title: "Enterprise",
-          price: "Custom",
-          description: "Advanced features for large golf operations",
+          title: "🏆 Strategic Partner",
+          price: "INVITE ONLY",
+          description: "Exclusive partnership for golf industry leaders",
           features: [
-            "Multiple course support",
-            "Custom integrations",
-            "Dedicated account manager",
-            "24/7 phone support",
-            "SLA guarantee",
-            "Custom training",
-            "On-premise option"
+            "🤝 Strategic partnership status",
+            "🔧 Platform co-development input",
+            "📢 Joint marketing opportunities",
+            "🎯 White-label possibilities",
+            "📞 Direct founder hotline",
+            "🌍 Regional exclusivity options",
+            "💵 Revenue sharing programs"
           ],
-          cta: "Contact Sales"
+          cta: "Apply for Partnership"
         }
       }
     },
     
     // Testimonials Section
     testimonials: {
-      badge: "What Our Customers Say",
-      title: "Trusted by Golf Courses Across Asia",
-      subtitle: "Join hundreds of satisfied golf courses who have transformed their operations with KOLF",
+      badge: "🚀 Industry Buzz",
+      title: "Golf Industry Leaders Are Excited",
+      subtitle: "Golf professionals across Asia are already talking about KOLF's revolutionary approach to golf management",
       items: [
         {
-          quote: "KOLF transformed our operations completely. The caddie management system alone saved us 20 hours per week, and our revenue has increased by 35% since implementation.",
+          quote: "Finally! Someone understands what Asian golf courses actually need. I've been waiting 20 years for technology this sophisticated. Can't wait for the beta launch!",
           author: "Somchai Jaidee",
           role: "General Manager",
           course: "Bangkok Golf Club"
         },
         {
-          quote: "The multilingual support is fantastic. Our Korean and Japanese guests love being able to book in their native language. It's increased our international bookings by 40%.",
+          quote: "The AI caddie management concept is revolutionary. This will completely change how we operate. I'm already planning our implementation strategy for 2025.",
           author: "Kim Min-jun",
           role: "Operations Director", 
           course: "Pattaya International Golf Resort"
         },
         {
-          quote: "Dynamic pricing has been a game-changer. We're now maximizing revenue during peak times while filling slots during off-peak hours. Simply brilliant!",
+          quote: "I've seen the early demos - this is going to disrupt the entire golf management industry. The multilingual AI features are beyond anything I've seen before!",
           author: "Tanaka Hiroshi",
-          role: "Owner",
-          course: "Chiang Mai Highlands"
+          role: "Golf Technology Consultant",
+          course: "Asian Golf Innovation Summit"
         }
       ]
     },
     
     // Contact Section
     contact: {
-      badge: "Get Started Today",
-      title: "Ready to Transform Your Golf Course?",
-      subtitle: "Schedule a free demo and see how KOLF can revolutionize your golf course operations",
+      badge: "🏆 Join the Revolution",
+      title: "Secure Your VIP Early Access Now",
+      subtitle: "Limited spots available for beta program! Be among the first to experience the future of golf management in Asia",
       form: {
         name: "Full Name",
         email: "Email Address",
         phone: "Phone Number",
         course: "Golf Course Name",
         role: "Your Role",
-        message: "Tell us about your needs",
-        submit: "Schedule Demo",
-        submitting: "Submitting...",
-        success: "Thank you! We'll contact you within 24 hours."
+        message: "Why do you want early access?",
+        submit: "🚀 Join VIP Waitlist",
+        submitting: "Securing your spot...",
+        success: "Welcome to the KOLF revolution! Check your email for exclusive updates."
       }
     },
     
@@ -222,7 +222,7 @@ export const translations = {
         title: "Legal",
         items: ["Privacy Policy", "Terms of Service", "Cookie Policy"]
       },
-      copyright: "© 2024 Avenen Global. All rights reserved."
+      copyright: "© 2025 Avenen Consulting. All rights reserved."
     }
   },
   
@@ -449,7 +449,7 @@ export const translations = {
         title: "กฎหมาย",
         items: ["นโยบายความเป็นส่วนตัว", "เงื่อนไขการให้บริการ", "นโยบายคุกกี้"]
       },
-      copyright: "© 2024 Avenen Global สงวนลิขสิทธิ์"
+      copyright: "© 2025 Avenen Consulting สงวนลิขสิทธิ์"
     }
   },
   
@@ -676,7 +676,7 @@ export const translations = {
         title: "법적 사항",
         items: ["개인정보 처리방침", "서비스 약관", "쿠키 정책"]
       },
-      copyright: "© 2024 Avenen Global. 모든 권리 보유."
+      copyright: "© 2025 Avenen Consulting. 모든 권리 보유."
     }
   },
   
@@ -903,7 +903,7 @@ export const translations = {
         title: "法的事項",
         items: ["プライバシーポリシー", "利用規約", "クッキーポリシー"]
       },
-      copyright: "© 2024 Avenen Global. 全著作権所有。"
+      copyright: "© 2025 Avenen Consulting. 全著作権所有。"
     }
   },
   
@@ -1130,7 +1130,7 @@ export const translations = {
         title: "法律",
         items: ["隐私政策", "服务条款", "Cookie政策"]
       },
-      copyright: "© 2024 Avenen Global。保留所有权利。"
+      copyright: "© 2025 Avenen Consulting。保留所有权利。"
     }
   }
 }

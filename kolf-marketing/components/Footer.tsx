@@ -17,7 +17,7 @@ const footerSections = [
   {
     title: 'Company',
     links: [
-      { name: 'About Avenen Global', href: '/about' },
+      { name: 'About Avenen Consulting', href: '/about' },
       { name: 'Careers', href: '/careers' },
       { name: 'Press & Media', href: '/press' },
       { name: 'Partners', href: '/partners' },
@@ -112,7 +112,7 @@ export default function Footer() {
                 </div>
                 <div className="flex flex-col">
                   <span className="font-bold text-2xl text-white">KOLF</span>
-                  <span className="text-sm text-gray-400 -mt-1">by Avenen Global</span>
+                  <span className="text-sm text-gray-400 -mt-1">by Avenen Consulting</span>
                 </div>
               </div>
 
@@ -263,7 +263,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto container-padding py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-gray-400">
-              © 2024 Avenen Global. All rights reserved.
+              © 2025 Avenen Consulting. All rights reserved.
             </div>
             
             {/* Language Selector */}

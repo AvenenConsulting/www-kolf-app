@@ -1,15 +1,8 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import '../globals.css'
-import '../styles.css'
+import '@/app/globals.css'
+import '@/app/styles.css'
 import { notFound } from 'next/navigation'
 import { getTranslations } from '@/lib/translations'
-
-const inter = Inter({ 
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter'
-})
 
 export function generateStaticParams() {
   return [
@@ -31,21 +24,21 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const t = getTranslations(locale as any)
   
   return {
-    title: `KOLF - ${t.hero.title.part1} ${t.hero.title.part2} ${t.hero.title.part3} | Avenen Global`,
+    title: `KOLF - ${t.hero.title.part1} ${t.hero.title.part2} ${t.hero.title.part3} | Avenen Consulting`,
     description: t.hero.subtitle,
     keywords: 'golf course management, golf booking system, caddie management, golf course software, Thailand golf, Asia golf management',
-    authors: [{ name: 'Avenen Global' }],
-    creator: 'Avenen Global',
-    publisher: 'Avenen Global',
+    authors: [{ name: 'Avenen Consulting' }],
+    creator: 'Avenen Consulting',
+    publisher: 'Avenen Consulting',
     robots: 'index, follow',
-    metadataBase: new URL('https://kolf.avenen.com'),
+    metadataBase: new URL('https://kolf.app'),
     openGraph: {
       type: 'website',
       locale: locale === 'zh' ? 'zh_CN' : locale === 'ko' ? 'ko_KR' : locale === 'ja' ? 'ja_JP' : locale === 'th' ? 'th_TH' : 'en_US',
-      url: `https://kolf.avenen.com/${locale}`,
+      url: `https://kolf.app/${locale}`,
       title: 'KOLF - Golf Course Management System',
       description: t.hero.subtitle,
-      siteName: 'KOLF by Avenen Global',
+      siteName: 'KOLF by Avenen Consulting',
       images: [
         {
           url: '/og-image.jpg',
@@ -87,7 +80,7 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html lang={locale} className={inter.variable}>
+    <html lang={locale}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -97,7 +90,7 @@ export default async function LocaleLayout({
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <body className={`${inter.className} antialiased`}>
+      <body className="antialiased">
         {children}
       </body>
     </html>

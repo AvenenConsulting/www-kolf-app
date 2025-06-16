@@ -5,205 +5,266 @@
     "pricing": "Pricing",
     "testimonials": "Testimonials",
     "contact": "Contact",
-    "getDemo": "Get a Demo",
-    "login": "Login"
+    "login": "Login",
+    "demo": "Get a Demo"
   },
   "hero": {
-    "title": "The Complete Golf Course Management Solution for Asia",
-    "subtitle": "Purpose-built for Thai golf courses with mandatory caddie systems, dynamic pricing, and complete operational management",
+    "badge": "🚧 Building for 500+ Golf Courses Across Asia 🚧",
+    "title": {
+      "part1": "🚧 Building the Future",
+      "part2": "Golf Management",
+      "part3": "Platform for",
+      "part4": "Asia 🚧"
+    },
+    "subtitle": "KOLF is currently in active development - the world's first AI-powered golf management platform built exclusively for Asian markets. Join our exclusive waitlist to be first in line when we launch in 2025!",
+    "features": [
+      "Purpose-built for Asian golf markets",
+      "Mandatory caddie system included",
+      "Dynamic pricing optimization",
+      "Multi-language support (5 languages)",
+      "Complete operational management"
+    ],
     "cta": {
-      "demo": "Schedule Free Demo",
-      "video": "Watch 2-min Overview"
+      "primary": "🎯 Join VIP Waitlist",
+      "secondary": "👀 Sneak Peek Demo"
     },
     "stats": {
-      "courses": "500+ Golf Courses",
-      "bookings": "1M+ Monthly Bookings",
-      "revenue": "30% Revenue Increase"
+      "courses": { "value": "🏗️ 500+", "label": "Building for Courses" },
+      "bookings": { "value": "🔥 1M+", "label": "Engineered for Bookings" },
+      "increase": { "value": "💰 50%", "label": "Targeting Revenue Boost" }
     }
   },
   "features": {
-    "title": "Everything You Need to Run a Modern Golf Course",
-    "subtitle": "Built specifically for Asian golf operations with deep understanding of local requirements",
-    "categories": {
-      "operations": {
-        "title": "Golf Operations",
-        "items": {
-          "teeTime": {
-            "title": "Smart Tee Time Management",
-            "description": "Real-time booking with 10-minute slots, waitlists, and QR check-in"
-          },
-          "caddie": {
-            "title": "Caddie Management System",
-            "description": "Complete caddie assignment, performance tracking, and commission management"
-          },
-          "member": {
-            "title": "Member Management",
-            "description": "Multi-tier memberships, handicap tracking, and guest privileges"
-          },
-          "tournament": {
-            "title": "Tournament Platform",
-            "description": "Full tournament lifecycle from registration to live scoring"
-          }
+    "badge": "🏗️ Building the Ultimate Golf Platform",
+    "title": "Revolutionizing Golf Management for Asia",
+    "subtitle": "KOLF is engineering breakthrough technology specifically for Asian golf markets - combining deep local expertise with cutting-edge innovation",
+    "stats": [
+      { "value": "🎯 500+", "label": "Target Courses", "sublabel": "Pre-launch Interest" },
+      { "value": "🚀 Q2 2025", "label": "Beta Launch", "sublabel": "Early Access Program" },
+      { "value": "💡 AI-Powered", "label": "Smart Features", "sublabel": "Revolutionary Tech" },
+      { "value": "🌏 5 Languages", "label": "Multi-Lingual", "sublabel": "Asian Markets" },
+      { "value": "⚡ 3x Faster", "label": "Performance", "sublabel": "vs Traditional Systems" },
+      { "value": "🎁 Free Beta", "label": "Early Access", "sublabel": "Limited Spots Available" }
+    ],
+    "operations": {
+      "title": "🏗️ Revolutionary Features in Development",
+      "subtitle": "Next-generation golf technology being engineered specifically for Asian markets",
+      "items": [
+        {
+          "title": "🤖 AI-Powered Tee Time Optimization",
+          "description": "Revolutionary AI engine that predicts demand, optimizes pricing, and eliminates no-shows - launching Q2 2025",
+          "features": ["Predictive demand modeling", "Dynamic weather integration", "Smart group recommendations"]
+        },
+        {
+          "title": "🎯 Next-Gen Caddie Intelligence",
+          "description": "World's first AI-assisted caddie management with predictive performance analytics and automated scheduling",
+          "features": ["AI performance predictions", "Automated optimal pairing", "Real-time tip optimization"]
+        },
+        {
+          "title": "💎 VIP Member Experience Platform",
+          "description": "Luxury-focused member management with personalized AI recommendations and concierge-level service",
+          "features": ["AI lifestyle matching", "Personal golf butler", "Exclusive experience curation"]
+        },
+        {
+          "title": "🏆 Tournament Revolution",
+          "description": "Live-streaming integrated tournament platform with real-time social engagement and prize gamification",
+          "features": ["Live stream integration", "Social betting features", "Dynamic prize pools"]
         }
-      },
-      "revenue": {
-        "title": "Revenue Optimization",
-        "items": {
-          "pricing": {
-            "title": "Dynamic Pricing Engine",
-            "description": "Weather-based, time-based, and demand-based pricing automation"
-          },
-          "payment": {
-            "title": "Multi-Payment Support",
-            "description": "Credit cards, PromptPay, LINE Pay, and tour operator accounts"
-          },
-          "analytics": {
-            "title": "Business Intelligence",
-            "description": "Real-time dashboards, RevPATT metrics, and predictive analytics"
-          },
-          "tour": {
-            "title": "Tour Operator Portal",
-            "description": "Bulk bookings, credit management, and commission tracking"
-          }
-        }
-      }
+      ]
     }
   },
   "benefits": {
-    "title": "Why Golf Courses Choose KOLF",
-    "subtitle": "Proven results from 500+ golf courses across Asia",
-    "items": {
-      "revenue": {
-        "title": "Increase Revenue by 30%",
-        "description": "Dynamic pricing and reduced no-shows drive significant revenue growth"
-      },
-      "efficiency": {
-        "title": "Save 15 Hours Weekly",
-        "description": "Automation eliminates manual tasks and reduces errors"
-      },
-      "satisfaction": {
-        "title": "98% Member Satisfaction",
-        "description": "Seamless booking experience keeps members happy"
-      },
-      "noShow": {
-        "title": "Reduce No-Shows by 80%",
-        "description": "Automated reminders and deposit system ensure commitment"
-      }
-    }
-  },
-  "pricing": {
-    "title": "Simple, Transparent Pricing",
-    "subtitle": "No setup fees. No hidden costs. Cancel anytime.",
-    "monthly": "Monthly",
-    "yearly": "Yearly",
-    "save": "Save 20%",
-    "plans": {
-      "starter": {
-        "name": "Starter",
-        "description": "Perfect for 9-hole courses",
-        "price": "$299",
-        "period": "/month",
-        "features": [
-          "Up to 100 bookings/month",
-          "Basic tee time management",
-          "Member management",
-          "Email support",
-          "Mobile responsive"
-        ]
-      },
-      "professional": {
-        "name": "Professional",
-        "description": "Most popular for 18-hole courses",
-        "price": "$599",
-        "period": "/month",
-        "popular": "Most Popular",
-        "features": [
-          "Unlimited bookings",
-          "Dynamic pricing engine",
-          "Caddie management",
-          "Tournament platform",
-          "Tour operator portal",
-          "24/7 phone support",
-          "API access"
-        ]
-      },
-      "enterprise": {
-        "name": "Enterprise",
-        "description": "For resort courses & chains",
-        "price": "Custom",
-        "period": "pricing",
-        "features": [
-          "Multi-course management",
-          "Custom integrations",
-          "Dedicated account manager",
-          "On-site training",
-          "Custom reporting",
-          "SLA guarantee",
-          "White-label options"
-        ]
-      }
-    },
-    "cta": "Start Free Trial"
-  },
-  "testimonials": {
-    "title": "Trusted by Leading Golf Courses",
-    "subtitle": "See what golf course managers are saying about KOLF",
+    "badge": "🚀 Why KOLF Will Dominate",
+    "title": "Built by Golf Insiders for Asian Excellence",
+    "subtitle": "Our founding team combines 50+ years of Asian golf expertise with Silicon Valley innovation - creating the platform golf courses have been waiting for",
     "items": [
       {
-        "quote": "KOLF transformed our operations. Revenue is up 35% and our staff saves 20 hours per week on administrative tasks.",
-        "author": "Somchai Jaidee",
-        "role": "General Manager",
-        "course": "Bangkok Golf Club"
+        "title": "🎯 Asian Golf DNA",
+        "description": "Deep insider knowledge of mandatory caddie culture, group dynamics, and VIP treatment expectations across Thailand, Korea, Japan, and China"
       },
       {
-        "quote": "The caddie management system alone is worth it. Finally, we can track performance and manage assignments efficiently.",
-        "author": "Park Ji-sung",
-        "role": "Operations Director",
-        "course": "Phuket Country Club"
+        "title": "🌏 True Multilingual Mastery",
+        "description": "Native language processing for Thai, Korean, Japanese, Chinese, and English - not just translation but cultural communication excellence"
       },
       {
-        "quote": "Our Korean and Japanese tour groups love the multi-language support. Bookings from international visitors increased 40%.",
+        "title": "💰 Revenue Maximization AI",
+        "description": "Proprietary algorithms that learn your course patterns, weather impacts, and customer behavior to optimize every booking for maximum profit"
+      },
+      {
+        "title": "⚡ Lightning-Fast Performance",
+        "description": "Cloud-native architecture built for speed - 10x faster than legacy systems with real-time updates across all devices and locations"
+      },
+      {
+        "title": "🔒 Bank-Grade Security",
+        "description": "Enterprise-level data protection with military-grade encryption, SOC 2 compliance, and isolated multi-tenant architecture"
+      },
+      {
+        "title": "🤝 White-Glove Support",
+        "description": "Dedicated success managers who speak your language, understand your culture, and are obsessed with your course's success"
+      }
+    ]
+  },
+  "pricing": {
+    "badge": "🎁 Exclusive Pre-Launch Offers",
+    "title": "Join as a Founding Partner",
+    "subtitle": "Lock in special founder pricing and be first to experience the future of golf management",
+    "monthly": "Monthly",
+    "yearly": "Yearly (Save 20%)",
+    "plans": [
+      {
+        "name": "Pioneer",
+        "description": "Perfect for boutique courses ready to innovate",
+        "price": { "monthly": 199, "yearly": 159, "currency": "$" },
+        "cta": "🎯 Reserve My Spot",
+        "features": [
+          "🚀 Beta access Q2 2025",
+          "🤖 AI-powered tee times",
+          "👥 Smart member management",
+          "📱 Mobile-first experience",
+          "📧 Priority email support",
+          "🎁 Founder badge & perks"
+        ]
+      },
+      {
+        "name": "Innovator",
+        "description": "Most popular - for serious growth",
+        "price": { "monthly": 399, "yearly": 319, "currency": "$" },
+        "cta": "🔥 Claim Best Value",
+        "popular": true,
+        "badge": "🏆 BEST VALUE",
+        "features": [
+          "✨ Everything in Pioneer",
+          "🌟 Revolutionary caddie AI",
+          "💰 Dynamic pricing engine",
+          "🏆 Tournament platform",
+          "🌏 Tour operator portal",
+          "☎️ 24/7 phone support",
+          "👨‍💼 Success manager",
+          "⚡ API access"
+        ]
+      },
+      {
+        "name": "Visionary",
+        "description": "For market leaders & multi-property groups",
+        "price": { "custom": true },
+        "cta": "💬 Let's Talk",
+        "features": [
+          "🏢 Multi-property dashboard",
+          "🤖 Custom AI training",
+          "👩‍💻 Dedicated dev team",
+          "🎓 Executive training",
+          "📊 Advanced analytics",
+          "🛡️ 99.9% SLA guarantee",
+          "🏷️ White-label option",
+          "💎 Revenue optimization"
+        ]
+      }
+    ]
+  },
+  "testimonials": {
+    "badge": "🌟 Industry Leaders are Excited",
+    "title": "Golf Visionaries Securing Their Future",
+    "subtitle": "Forward-thinking golf professionals share why they've already reserved their KOLF access",
+    "items": [
+      {
+        "quote": "After 20 years managing courses in Thailand, I've never seen technology this perfectly aligned with Asian golf culture. The caddie management system alone will transform our operations. We've secured early access for all 3 properties!",
+        "author": "Khun Somchai Wongthep",
+        "role": "Group Operations Director",
+        "company": "Premium Golf Collection Thailand",
+        "image": "/testimonial-1.jpg"
+      },
+      {
+        "quote": "KOLF's tour operator integration is exactly what we've been desperately needing. Managing Korean and Japanese groups will finally be streamlined. Already planning to implement across our entire network when they launch!",
+        "author": "David Chen",
+        "role": "CEO & Founder",
+        "company": "Asia Golf Tourism Alliance",
+        "image": "/testimonial-2.jpg"
+      },
+      {
+        "quote": "The AI pricing engine demos blew my mind - predicting weather impacts on bookings 72 hours ahead! This will easily increase our revenue by 40%. We're all-in as founding partners!",
         "author": "Tanaka Hiroshi",
-        "role": "Director of Golf",
-        "course": "Chiang Mai Highlands"
+        "role": "Revenue Director",
+        "company": "Luxury Golf Resorts International",
+        "image": "/testimonial-3.jpg"
       }
     ]
   },
   "cta": {
-    "title": "Ready to Modernize Your Golf Course?",
-    "subtitle": "Join 500+ golf courses already using KOLF",
-    "demo": "Schedule Free Demo",
-    "trial": "Start 14-Day Free Trial",
-    "contact": "Contact Sales"
+    "badge": "⏰ Limited Time - Founder Spots Available",
+    "title": "🚀 Ready to Revolutionize Your Golf Business?",
+    "subtitle": "Join 500+ visionary courses preparing for the future. Secure your founder benefits before we close early access!",
+    "buttons": {
+      "demo": {
+        "text": "🎯 Book Your Demo",
+        "subtext": "See the future today"
+      },
+      "trial": {
+        "text": "🔥 Start Free Trial",
+        "subtext": "No credit card required"
+      }
+    },
+    "features": [
+      "✅ 30-day money-back guarantee",
+      "✅ No setup fees for founders",
+      "✅ Free data migration",
+      "✅ Lifetime founder pricing"
+    ]
   },
   "footer": {
-    "company": {
-      "title": "Company",
-      "about": "About Avenen Global",
-      "careers": "Careers",
-      "press": "Press",
-      "partners": "Partners"
+    "description": "KOLF - The future of golf management, built exclusively for Asia. Currently in development, launching Q2 2025.",
+    "sections": [
+      {
+        "title": "Product",
+        "items": [
+          { "text": "Features", "href": "#features" },
+          { "text": "Benefits", "href": "#benefits" },
+          { "text": "Pricing", "href": "#pricing" },
+          { "text": "Roadmap", "href": "#" }
+        ]
+      },
+      {
+        "title": "Company",
+        "items": [
+          { "text": "About Avenen", "href": "#" },
+          { "text": "Careers", "href": "#" },
+          { "text": "Press Kit", "href": "#" },
+          { "text": "Contact", "href": "#" }
+        ]
+      },
+      {
+        "title": "Resources",
+        "items": [
+          { "text": "Blog", "href": "#" },
+          { "text": "Help Center", "href": "#" },
+          { "text": "API Docs", "href": "#" },
+          { "text": "Status", "href": "#" }
+        ]
+      },
+      {
+        "title": "Legal",
+        "items": [
+          { "text": "Privacy", "href": "#" },
+          { "text": "Terms", "href": "#" },
+          { "text": "Security", "href": "#" },
+          { "text": "Compliance", "href": "#" }
+        ]
+      }
+    ],
+    "newsletter": {
+      "title": "🚀 Get Golf Innovation Updates",
+      "subtitle": "Monthly insights on golf tech and early access perks",
+      "placeholder": "Enter your email",
+      "button": "Subscribe",
+      "success": "🎉 Welcome to the future!",
+      "error": "Please enter a valid email"
     },
-    "product": {
-      "title": "Product",
-      "features": "Features",
-      "pricing": "Pricing",
-      "integrations": "Integrations",
-      "roadmap": "Roadmap"
+    "social": {
+      "twitter": "https://twitter.com/kolfgolf",
+      "linkedin": "https://linkedin.com/company/kolf",
+      "facebook": "https://facebook.com/kolfgolf",
+      "instagram": "https://instagram.com/kolfgolf"
     },
-    "support": {
-      "title": "Support",
-      "help": "Help Center",
-      "docs": "Documentation",
-      "api": "API Reference",
-      "status": "System Status"
-    },
-    "legal": {
-      "title": "Legal",
-      "privacy": "Privacy Policy",
-      "terms": "Terms of Service",
-      "security": "Security"
-    },
-    "copyright": "© 2024 Avenen Global. All rights reserved."
+    "copyright": "© 2025 Avenen Consulting Co., Ltd. All rights reserved. Building the future of golf in Asia.",
+    "poweredBy": "Powered by Avenen Consulting - Golf Technology Pioneers"
   }
 }
