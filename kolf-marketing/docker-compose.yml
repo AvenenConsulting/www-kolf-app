@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  kolf-marketing:
+    build: .
+    ports:
+      - "8088:80"
+    restart: unless-stopped
+    container_name: kolf-marketing-site

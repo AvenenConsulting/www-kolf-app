@@ -1,0 +1,209 @@
+{
+  "nav": {
+    "features": "기능",
+    "benefits": "혜택",
+    "pricing": "가격",
+    "testimonials": "후기",
+    "contact": "연락처",
+    "getDemo": "데모 요청",
+    "login": "로그인"
+  },
+  "hero": {
+    "title": "아시아를 위한 완전한 골프장 관리 솔루션",
+    "subtitle": "필수 캐디 시스템, 동적 가격 책정 및 완전한 운영 관리를 갖춘 태국 골프장을 위해 특별히 제작",
+    "cta": {
+      "demo": "무료 데모 예약",
+      "video": "2분 개요 보기"
+    },
+    "stats": {
+      "courses": "500+ 골프장",
+      "bookings": "월 100만+ 예약",
+      "revenue": "수익 30% 증가"
+    }
+  },
+  "features": {
+    "title": "현대적인 골프장 운영에 필요한 모든 것",
+    "subtitle": "지역 요구사항에 대한 깊은 이해를 바탕으로 아시아 골프 운영을 위해 특별히 제작",
+    "categories": {
+      "operations": {
+        "title": "골프 운영",
+        "items": {
+          "teeTime": {
+            "title": "스마트 티타임 관리",
+            "description": "10분 슬롯으로 실시간 예약, 대기자 목록 및 QR 체크인"
+          },
+          "caddie": {
+            "title": "캐디 관리 시스템",
+            "description": "완전한 캐디 배정, 성과 추적 및 수수료 관리"
+          },
+          "member": {
+            "title": "회원 관리",
+            "description": "다계층 멤버십, 핸디캡 추적 및 게스트 특권"
+          },
+          "tournament": {
+            "title": "토너먼트 플랫폼",
+            "description": "등록부터 라이브 스코어링까지 완전한 토너먼트 생명주기"
+          }
+        }
+      },
+      "revenue": {
+        "title": "수익 최적화",
+        "items": {
+          "pricing": {
+            "title": "동적 가격 엔진",
+            "description": "날씨 기반, 시간 기반 및 수요 기반 가격 자동화"
+          },
+          "payment": {
+            "title": "다중 결제 지원",
+            "description": "신용카드, PromptPay, LINE Pay 및 여행사 계정"
+          },
+          "analytics": {
+            "title": "비즈니스 인텔리전스",
+            "description": "실시간 대시보드, RevPATT 지표 및 예측 분석"
+          },
+          "tour": {
+            "title": "여행사 포털",
+            "description": "대량 예약, 신용 관리 및 수수료 추적"
+          }
+        }
+      }
+    }
+  },
+  "benefits": {
+    "title": "골프장이 KOLF를 선택하는 이유",
+    "subtitle": "아시아 전역 500개 이상의 골프장에서 입증된 결과",
+    "items": {
+      "revenue": {
+        "title": "수익 30% 증가",
+        "description": "동적 가격 책정과 노쇼 감소로 상당한 수익 증가 달성"
+      },
+      "efficiency": {
+        "title": "주 15시간 절약",
+        "description": "자동화로 수동 작업과 오류 제거"
+      },
+      "satisfaction": {
+        "title": "회원 만족도 98%",
+        "description": "원활한 예약 경험으로 회원 만족도 유지"
+      },
+      "noShow": {
+        "title": "노쇼 80% 감소",
+        "description": "자동 알림과 보증금 시스템으로 약속 보장"
+      }
+    }
+  },
+  "pricing": {
+    "title": "간단하고 투명한 가격",
+    "subtitle": "설치비 없음. 숨겨진 비용 없음. 언제든 취소 가능.",
+    "monthly": "월간",
+    "yearly": "연간",
+    "save": "20% 절약",
+    "plans": {
+      "starter": {
+        "name": "스타터",
+        "description": "9홀 코스에 완벽",
+        "price": "₩399,000",
+        "period": "/월",
+        "features": [
+          "월 최대 100회 예약",
+          "기본 티타임 관리",
+          "회원 관리",
+          "이메일 지원",
+          "모바일 반응형"
+        ]
+      },
+      "professional": {
+        "name": "프로페셔널",
+        "description": "18홀 코스에 가장 인기",
+        "price": "₩799,000",
+        "period": "/월",
+        "popular": "가장 인기",
+        "features": [
+          "무제한 예약",
+          "동적 가격 엔진",
+          "캐디 관리",
+          "토너먼트 플랫폼",
+          "여행사 포털",
+          "24/7 전화 지원",
+          "API 접근"
+        ]
+      },
+      "enterprise": {
+        "name": "엔터프라이즈",
+        "description": "리조트 코스 및 체인을 위한",
+        "price": "맞춤",
+        "period": "가격",
+        "features": [
+          "다중 코스 관리",
+          "맞춤 통합",
+          "전담 계정 매니저",
+          "현장 교육",
+          "맞춤 보고",
+          "SLA 보장",
+          "화이트 라벨 옵션"
+        ]
+      }
+    },
+    "cta": "무료 체험 시작"
+  },
+  "testimonials": {
+    "title": "선도적인 골프장의 신뢰",
+    "subtitle": "골프장 매니저들이 KOLF에 대해 말하는 것을 확인하세요",
+    "items": [
+      {
+        "quote": "KOLF가 우리 운영을 변화시켰습니다. 수익이 35% 증가했고 직원들은 주당 20시간의 관리 업무를 절약했습니다.",
+        "author": "김철수",
+        "role": "총지배인",
+        "course": "서울 골프 클럽"
+      },
+      {
+        "quote": "캐디 관리 시스템만으로도 가치가 있습니다. 마침내 성과를 추적하고 배정을 효율적으로 관리할 수 있게 되었습니다.",
+        "author": "박지성",
+        "role": "운영 이사",
+        "course": "부산 컨트리 클럽"
+      },
+      {
+        "quote": "한국과 일본 투어 그룹들이 다국어 지원을 좋아합니다. 해외 방문객 예약이 40% 증가했습니다.",
+        "author": "이영희",
+        "role": "골프 이사",
+        "course": "제주 하이랜즈"
+      }
+    ]
+  },
+  "cta": {
+    "title": "골프장을 현대화할 준비가 되셨나요?",
+    "subtitle": "이미 KOLF를 사용하고 있는 500개 이상의 골프장에 합류하세요",
+    "demo": "무료 데모 예약",
+    "trial": "14일 무료 체험 시작",
+    "contact": "영업팀 연락"
+  },
+  "footer": {
+    "company": {
+      "title": "회사",
+      "about": "Avenen Global 소개",
+      "careers": "채용",
+      "press": "보도자료",
+      "partners": "파트너"
+    },
+    "product": {
+      "title": "제품",
+      "features": "기능",
+      "pricing": "가격",
+      "integrations": "통합",
+      "roadmap": "로드맵"
+    },
+    "support": {
+      "title": "지원",
+      "help": "도움말 센터",
+      "docs": "문서",
+      "api": "API 참조",
+      "status": "시스템 상태"
+    },
+    "legal": {
+      "title": "법적 고지",
+      "privacy": "개인정보처리방침",
+      "terms": "이용약관",
+      "security": "보안"
+    },
+    "copyright": "© 2024 Avenen Global. 모든 권리 보유."
+  }
+}

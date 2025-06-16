@@ -1,0 +1,21 @@
+{
+  "name": "KOLF - Golf Course Management System",
+  "short_name": "KOLF",
+  "description": "The complete golf course management solution for Asia",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#22c55e",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

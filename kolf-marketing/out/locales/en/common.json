@@ -1,0 +1,209 @@
+{
+  "nav": {
+    "features": "Features",
+    "benefits": "Benefits",
+    "pricing": "Pricing",
+    "testimonials": "Testimonials",
+    "contact": "Contact",
+    "getDemo": "Get a Demo",
+    "login": "Login"
+  },
+  "hero": {
+    "title": "The Complete Golf Course Management Solution for Asia",
+    "subtitle": "Purpose-built for Thai golf courses with mandatory caddie systems, dynamic pricing, and complete operational management",
+    "cta": {
+      "demo": "Schedule Free Demo",
+      "video": "Watch 2-min Overview"
+    },
+    "stats": {
+      "courses": "500+ Golf Courses",
+      "bookings": "1M+ Monthly Bookings",
+      "revenue": "30% Revenue Increase"
+    }
+  },
+  "features": {
+    "title": "Everything You Need to Run a Modern Golf Course",
+    "subtitle": "Built specifically for Asian golf operations with deep understanding of local requirements",
+    "categories": {
+      "operations": {
+        "title": "Golf Operations",
+        "items": {
+          "teeTime": {
+            "title": "Smart Tee Time Management",
+            "description": "Real-time booking with 10-minute slots, waitlists, and QR check-in"
+          },
+          "caddie": {
+            "title": "Caddie Management System",
+            "description": "Complete caddie assignment, performance tracking, and commission management"
+          },
+          "member": {
+            "title": "Member Management",
+            "description": "Multi-tier memberships, handicap tracking, and guest privileges"
+          },
+          "tournament": {
+            "title": "Tournament Platform",
+            "description": "Full tournament lifecycle from registration to live scoring"
+          }
+        }
+      },
+      "revenue": {
+        "title": "Revenue Optimization",
+        "items": {
+          "pricing": {
+            "title": "Dynamic Pricing Engine",
+            "description": "Weather-based, time-based, and demand-based pricing automation"
+          },
+          "payment": {
+            "title": "Multi-Payment Support",
+            "description": "Credit cards, PromptPay, LINE Pay, and tour operator accounts"
+          },
+          "analytics": {
+            "title": "Business Intelligence",
+            "description": "Real-time dashboards, RevPATT metrics, and predictive analytics"
+          },
+          "tour": {
+            "title": "Tour Operator Portal",
+            "description": "Bulk bookings, credit management, and commission tracking"
+          }
+        }
+      }
+    }
+  },
+  "benefits": {
+    "title": "Why Golf Courses Choose KOLF",
+    "subtitle": "Proven results from 500+ golf courses across Asia",
+    "items": {
+      "revenue": {
+        "title": "Increase Revenue by 30%",
+        "description": "Dynamic pricing and reduced no-shows drive significant revenue growth"
+      },
+      "efficiency": {
+        "title": "Save 15 Hours Weekly",
+        "description": "Automation eliminates manual tasks and reduces errors"
+      },
+      "satisfaction": {
+        "title": "98% Member Satisfaction",
+        "description": "Seamless booking experience keeps members happy"
+      },
+      "noShow": {
+        "title": "Reduce No-Shows by 80%",
+        "description": "Automated reminders and deposit system ensure commitment"
+      }
+    }
+  },
+  "pricing": {
+    "title": "Simple, Transparent Pricing",
+    "subtitle": "No setup fees. No hidden costs. Cancel anytime.",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "save": "Save 20%",
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "description": "Perfect for 9-hole courses",
+        "price": "$299",
+        "period": "/month",
+        "features": [
+          "Up to 100 bookings/month",
+          "Basic tee time management",
+          "Member management",
+          "Email support",
+          "Mobile responsive"
+        ]
+      },
+      "professional": {
+        "name": "Professional",
+        "description": "Most popular for 18-hole courses",
+        "price": "$599",
+        "period": "/month",
+        "popular": "Most Popular",
+        "features": [
+          "Unlimited bookings",
+          "Dynamic pricing engine",
+          "Caddie management",
+          "Tournament platform",
+          "Tour operator portal",
+          "24/7 phone support",
+          "API access"
+        ]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "For resort courses & chains",
+        "price": "Custom",
+        "period": "pricing",
+        "features": [
+          "Multi-course management",
+          "Custom integrations",
+          "Dedicated account manager",
+          "On-site training",
+          "Custom reporting",
+          "SLA guarantee",
+          "White-label options"
+        ]
+      }
+    },
+    "cta": "Start Free Trial"
+  },
+  "testimonials": {
+    "title": "Trusted by Leading Golf Courses",
+    "subtitle": "See what golf course managers are saying about KOLF",
+    "items": [
+      {
+        "quote": "KOLF transformed our operations. Revenue is up 35% and our staff saves 20 hours per week on administrative tasks.",
+        "author": "Somchai Jaidee",
+        "role": "General Manager",
+        "course": "Bangkok Golf Club"
+      },
+      {
+        "quote": "The caddie management system alone is worth it. Finally, we can track performance and manage assignments efficiently.",
+        "author": "Park Ji-sung",
+        "role": "Operations Director",
+        "course": "Phuket Country Club"
+      },
+      {
+        "quote": "Our Korean and Japanese tour groups love the multi-language support. Bookings from international visitors increased 40%.",
+        "author": "Tanaka Hiroshi",
+        "role": "Director of Golf",
+        "course": "Chiang Mai Highlands"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Modernize Your Golf Course?",
+    "subtitle": "Join 500+ golf courses already using KOLF",
+    "demo": "Schedule Free Demo",
+    "trial": "Start 14-Day Free Trial",
+    "contact": "Contact Sales"
+  },
+  "footer": {
+    "company": {
+      "title": "Company",
+      "about": "About Avenen Global",
+      "careers": "Careers",
+      "press": "Press",
+      "partners": "Partners"
+    },
+    "product": {
+      "title": "Product",
+      "features": "Features",
+      "pricing": "Pricing",
+      "integrations": "Integrations",
+      "roadmap": "Roadmap"
+    },
+    "support": {
+      "title": "Support",
+      "help": "Help Center",
+      "docs": "Documentation",
+      "api": "API Reference",
+      "status": "System Status"
+    },
+    "legal": {
+      "title": "Legal",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "security": "Security"
+    },
+    "copyright": "© 2024 Avenen Global. All rights reserved."
+  }
+}
