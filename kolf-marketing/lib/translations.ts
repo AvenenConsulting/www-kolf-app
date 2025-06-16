@@ -3,24 +3,24 @@ export const translations = {
     // Header
     nav: {
       features: "Features",
-      benefits: "Benefits", 
-      pricing: "Pricing",
-      testimonials: "Testimonials",
+      benefits: "Why KOLF", 
+      pricing: "Early Access",
+      testimonials: "Success Stories",
       contact: "Contact",
-      login: "Login",
-      demo: "Get a Demo"
+      login: "Partner Login",
+      demo: "Join Waitlist"
     },
     
     // Hero Section
     hero: {
-      badge: "🚧 Building for 500+ Golf Courses Across Asia 🚧",
+      badge: "Coming 2025 • Pre-Launch Access Available",
       title: {
-        part1: "🚧 Building the Future",
+        part1: "The Future of",
         part2: "Golf Management",
         part3: "Platform for",
-        part4: "Asia 🚧"
+        part4: "Asia"
       },
-      subtitle: "KOLF is currently in active development - the world's first AI-powered golf management platform built exclusively for Asian markets. Join our exclusive waitlist to be first in line when we launch in 2025!",
+      subtitle: "KOLF is the world's first AI-powered golf management platform built exclusively for Asian markets. Currently in development, launching 2025. Join our exclusive waitlist for early access.",
       features: [
         "Purpose-built for Asian golf markets",
         "Mandatory caddie system included",
@@ -29,50 +29,50 @@ export const translations = {
         "Complete operational management"
       ],
       cta: {
-        primary: "🎯 Join VIP Waitlist",
-        secondary: "👀 Sneak Peek Demo"
+        primary: "Join VIP Waitlist",
+        secondary: "Watch Demo"
       },
       stats: {
-        courses: { value: "🏗️ 500+", label: "Building for Courses" },
-        bookings: { value: "🔥 1M+", label: "Engineered for Bookings" },
-        increase: { value: "💰 50%", label: "Targeting Revenue Boost" }
+        courses: { value: "500+", label: "Target Courses" },
+        bookings: { value: "1M+", label: "Annual Bookings" },
+        increase: { value: "50%", label: "Revenue Growth" }
       }
     },
     
     // Features Section
     features: {
-      badge: "🏗️ Building the Ultimate Golf Platform",
+      badge: "Platform Features",
       title: "Revolutionizing Golf Management for Asia",
-      subtitle: "KOLF is engineering breakthrough technology specifically for Asian golf markets - combining deep local expertise with cutting-edge innovation",
+      subtitle: "Breakthrough technology designed specifically for Asian golf markets, combining deep local expertise with cutting-edge innovation",
       stats: [
-        { value: "🎯 500+", label: "Target Courses", sublabel: "Pre-launch Interest" },
-        { value: "🚀 Q2 2025", label: "Beta Launch", sublabel: "Early Access Program" },
-        { value: "💡 AI-Powered", label: "Smart Features", sublabel: "Revolutionary Tech" },
-        { value: "🌏 5 Languages", label: "Multi-Lingual", sublabel: "Asian Markets" },
-        { value: "⚡ 3x Faster", label: "Performance", sublabel: "vs Traditional Systems" },
-        { value: "🎁 Free Beta", label: "Early Access", sublabel: "Limited Spots Available" }
+        { value: "500+", label: "Target Courses", sublabel: "Pre-launch Interest" },
+        { value: "2025", label: "Launch Year", sublabel: "Early Access Program" },
+        { value: "AI", label: "Powered", sublabel: "Smart Automation" },
+        { value: "5", label: "Languages", sublabel: "Full Localization" },
+        { value: "3x", label: "Faster", sublabel: "Than Legacy Systems" },
+        { value: "24/7", label: "Support", sublabel: "Always Available" }
       ],
       operations: {
-        title: "🏗️ Revolutionary Features in Development",
+        title: "Revolutionary Features in Development",
         subtitle: "Next-generation golf technology being engineered specifically for Asian markets",
         items: [
           {
-            title: "🤖 AI-Powered Tee Time Optimization",
-            description: "Revolutionary AI engine that predicts demand, optimizes pricing, and eliminates no-shows - launching Q2 2025",
+            title: "AI-Powered Tee Time Optimization",
+            description: "Revolutionary AI engine that predicts demand, optimizes pricing, and eliminates no-shows",
             features: ["Predictive demand modeling", "Dynamic weather integration", "Smart group recommendations"]
           },
           {
-            title: "🎯 Next-Gen Caddie Intelligence",
+            title: "Smart Caddie Management",
             description: "World's first AI-assisted caddie management with predictive performance analytics and automated scheduling",
             features: ["AI performance predictions", "Automated optimal pairing", "Real-time tip optimization"]
           },
           {
-            title: "💎 VIP Member Experience Platform",
+            title: "VIP Member Experience",
             description: "Luxury-focused member management with personalized AI recommendations and concierge-level service",
             features: ["AI lifestyle matching", "Personal golf butler", "Exclusive experience curation"]
           },
           {
-            title: "🏆 Tournament Revolution",
+            title: "Tournament Management",
             description: "Live-streaming integrated tournament platform with real-time social engagement and prize gamification",
             features: ["Live stream integration", "Social betting features", "Dynamic prize pools"]
           }
@@ -82,24 +82,24 @@ export const translations = {
     
     // Benefits Section
     benefits: {
-      badge: "🚀 Why KOLF Will Dominate",
+      badge: "Why Choose KOLF",
       title: "Built by Golf Insiders for Asian Excellence",
       subtitle: "Our founding team combines 50+ years of Asian golf expertise with Silicon Valley innovation - creating the platform golf courses have been waiting for",
       items: [
         {
-          title: "🎯 Asian Golf DNA",
+          title: "Built for Asia",
           description: "Deep insider knowledge of mandatory caddie culture, group dynamics, and VIP treatment expectations across Thailand, Korea, Japan, and China"
         },
         {
-          title: "🌏 True Multilingual Mastery",
+          title: "True Multilingual Support",
           description: "Native language processing for Thai, Korean, Japanese, Chinese, and English - not just translation but cultural communication excellence"
         },
         {
-          title: "💰 Revenue Maximization AI",
+          title: "Revenue Optimization",
           description: "Proprietary algorithms that learn your course patterns, weather impacts, and customer behavior to optimize every booking for maximum profit"
         },
         {
-          title: "📱 Mobile-Obsessed Design",
+          title: "Mobile-First Design",
           description: "Built mobile-first for Asia's smartphone-dominant culture - lightning-fast, intuitive, and absolutely gorgeous on every device"
         }
       ]
@@ -107,51 +107,51 @@ export const translations = {
     
     // Pricing Section
     pricing: {
-      badge: "🎁 Exclusive Pre-Launch Access",
+      badge: "Early Access Program",
       title: "Join the Beta Revolution",
-      subtitle: "Limited early access spots available! Lock in founder pricing before public launch in Q2 2025.",
+      subtitle: "Limited early access spots available! Lock in founder pricing before public launch in 2025.",
       plans: {
         starter: {
-          title: "📲 VIP Waitlist",
+          title: "VIP Waitlist",
           price: "FREE",
           description: "Exclusive early access to beta platform",
           features: [
-            "🏆 Priority beta access",
-            "📧 Exclusive development updates",
-            "📞 Direct founder communication",
-            "🎁 Launch day benefits"
+            "Priority beta access",
+            "Exclusive development updates",
+            "Direct founder communication",
+            "Launch day benefits"
           ],
           cta: "Join Waitlist"
         },
         professional: { 
-          title: "🚀 Beta Partner", 
+          title: "Founding Partner", 
           price: "50% OFF",
           period: "founder pricing",
           description: "Become a founding customer with exclusive benefits",
           features: [
-            "🔥 Full platform beta access",
-            "📊 Dedicated success manager",
-            "🏗️ Custom feature requests",
-            "💰 Locked-in founder pricing",
-            "🎆 Launch event invitation",
-            "🚀 Co-marketing opportunities",
-            "🏆 Lifetime founder badge"
+            "Full platform beta access",
+            "Dedicated success manager",
+            "Custom feature requests",
+            "Locked-in founder pricing",
+            "Launch event invitation",
+            "Co-marketing opportunities",
+            "Lifetime founder status"
           ],
           cta: "Become Founder",
           popular: true
         },
         enterprise: {
-          title: "🏆 Strategic Partner",
+          title: "Strategic Partner",
           price: "INVITE ONLY",
           description: "Exclusive partnership for golf industry leaders",
           features: [
-            "🤝 Strategic partnership status",
-            "🔧 Platform co-development input",
-            "📢 Joint marketing opportunities",
-            "🎯 White-label possibilities",
-            "📞 Direct founder hotline",
-            "🌍 Regional exclusivity options",
-            "💵 Revenue sharing programs"
+            "Strategic partnership status",
+            "Platform co-development input",
+            "Joint marketing opportunities",
+            "White-label possibilities",
+            "Direct founder hotline",
+            "Regional exclusivity options",
+            "Revenue sharing programs"
           ],
           cta: "Apply for Partnership"
         }
@@ -160,7 +160,7 @@ export const translations = {
     
     // Testimonials Section
     testimonials: {
-      badge: "🚀 Industry Buzz",
+      badge: "What Leaders Say",
       title: "Golf Industry Leaders Are Excited",
       subtitle: "Golf professionals across Asia are already talking about KOLF's revolutionary approach to golf management",
       items: [
@@ -187,7 +187,7 @@ export const translations = {
     
     // Contact Section
     contact: {
-      badge: "🏆 Join the Revolution",
+      badge: "Get Started",
       title: "Secure Your VIP Early Access Now",
       subtitle: "Limited spots available for beta program! Be among the first to experience the future of golf management in Asia",
       form: {
@@ -197,7 +197,7 @@ export const translations = {
         course: "Golf Course Name",
         role: "Your Role",
         message: "Why do you want early access?",
-        submit: "🚀 Join VIP Waitlist",
+        submit: "Join VIP Waitlist",
         submitting: "Securing your spot...",
         success: "Welcome to the KOLF revolution! Check your email for exclusive updates."
       }
