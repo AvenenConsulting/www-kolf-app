@@ -100,6 +100,8 @@
     "badge": "🎁 独占ローンチ前アクセス",
     "title": "ベータ革命に参加",
     "subtitle": "限定早期アクセス枠！Q2 2025の一般ローンチ前に創設者価格をロックイン。",
+    "monthly": "月額",
+    "yearly": "年額（20%割引）",
     "plans": {
       "starter": {
         "title": "📲 VIP待機リスト",
@@ -188,6 +190,60 @@
       "success": "KOLF革命へようこそ！独占アップデートのためメールをチェックしてください。"
     }
   },
+  "cta": {
+    "badge": "⏰ 限定時間 - 創設者枠利用可能",
+    "title": "🚀 あなたのゴルフビジネスを革命的に変える準備はできていますか？",
+    "subtitle": "未来を準備している500+のビジョナリーコースに参加しましょう。早期アクセスを閉じる前に創設者特典を確保してください！",
+    "buttons": {
+      "demo": {
+        "text": "🎯 デモを予約",
+        "subtext": "今日未来を見る"
+      },
+      "trial": {
+        "text": "🔥 無料トライアル開始",
+        "subtext": "クレジットカード不要"
+      }
+    },
+    "features": [
+      "✅ 30日間返金保証",
+      "✅ 創設者のためのセットアップ料無料",
+      "✅ 無料データ移行",
+      "✅ 生涯創設者価格"
+    ]
+  },
+  "leadCapture": {
+    "title": "デモを予約",
+    "subtitle": "KOLFがあなたのゴルフ場の運営をどのように変革できるかご覧ください。パーソナライズされたデモと早期アクセス特典を受け取ります。",
+    "fields": {
+      "name": "お名前",
+      "email": "メールアドレス",
+      "phone": "電話番号",
+      "courseName": "ゴルフ場名",
+      "country": "国",
+      "message": "追加情報"
+    },
+    "placeholders": {
+      "name": "田中太郎",
+      "email": "tanaka@golfcourse.com",
+      "phone": "+81 90 1234 5678",
+      "courseName": "ロイヤル東京ゴルフクラブ",
+      "country": "あなたの国を選択",
+      "message": "あなたのニーズについて教えてください（オプション）"
+    },
+    "submit": "デモを今すぐ予約",
+    "submitting": "送信中...",
+    "successTitle": "デモリクエストを受け付けました！",
+    "successMessage": "パーソナライズされたデモのスケジュールを調整するため、24時間以内にご連絡いたします。",
+    "errorMessage": "問題が発生しました。もう一度お試しいただくか、直接メールでお問い合わせください。",
+    "privacy": "送信することで、当社のプライバシーポリシーと利用規約に同意したことになります。",
+    "errors": {
+      "nameRequired": "お名前を入力してください",
+      "emailRequired": "メールアドレスを入力してください",
+      "emailInvalid": "有効なメールアドレスを入力してください",
+      "courseRequired": "ゴルフ場名を入力してください",
+      "countryRequired": "あなたの国を選択してください"
+    }
+  },
   "footer": {
     "tagline": "アジアのための完全なゴルフ場管理ソリューション",
     "products": {
@@ -206,7 +262,22 @@
       "title": "法的事項",
       "items": ["プライバシーポリシー", "利用規約", "クッキーポリシー"]
     },
-    "copyright": "© 2025 Avenen Consulting. 全著作権所有。"
+    "newsletter": {
+      "title": "🚀 ゴルフイノベーションアップデートを取得",
+      "subtitle": "毎月のゴルフ技術の洞察と早期アクセス特典",
+      "placeholder": "メールアドレスを入力",
+      "button": "購読",
+      "success": "🎉 未来へようこそ！",
+      "error": "有効なメールアドレスを入力してください"
+    },
+    "social": {
+      "twitter": "#",
+      "linkedin": "#",
+      "facebook": "#",
+      "instagram": "#"
+    },
+    "copyright": "© 2025 Avenen Consulting. 全著作権所有。アジアのゴルフの未来を構築。",
+    "poweredBy": "Powered by Avenen Consulting - ゴルフ技術の先駆者"
   },
   "emailCapture": {
     "title": "早期アクセスを取得",

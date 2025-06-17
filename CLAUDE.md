@@ -4,11 +4,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is the KOLF marketing website - a multilingual Next.js application built with TypeScript and Tailwind CSS. The site is statically exported and deployed to AWS S3/CloudFront with comprehensive Google Analytics 4 tracking.
+This is the KOLF marketing website - a multilingual Next.js application built with TypeScript and Tailwind CSS. The site is statically exported and deployed to AWS S3/CloudFront via automated CI/CD pipeline.
 
 ## Development Commands
 
 ```bash
+# Navigate to project directory
+cd kolf-marketing
+
 # Install dependencies
 npm install
 
@@ -20,10 +23,44 @@ npm run build
 
 # Run linting
 npm run lint
+```
 
-# Deploy to AWS (requires AWS CLI configured)
+## Deployment Process
+
+**IMPORTANT**: The site uses AWS CodePipeline for automated deployment in the `ap-southeast-1` (Singapore) region.
+
+### Automatic Deployment (Recommended)
+```bash
+# Simply push to main branch
+git add .
+git commit -m "Your changes"
+git push origin main
+
+# Pipeline automatically triggers and deploys
+```
+
+### Monitor Deployment
+```bash
+# Check pipeline status
+aws codepipeline list-pipeline-executions \
+  --pipeline-name kolf-marketing-pipeline-pipeline \
+  --region ap-southeast-1 \
+  --max-items 1
+
+# Manually trigger pipeline if needed
+aws codepipeline start-pipeline-execution \
+  --name kolf-marketing-pipeline-pipeline \
+  --region ap-southeast-1
+```
+
+### Manual Deployment (Alternative)
+```bash
+# Use this only if pipeline is not available
+cd kolf-marketing
 ./deploy.sh
 ```
+
+See `kolf-marketing/DEPLOYMENT.md` for detailed deployment documentation.
 
 ## Architecture Overview
 
@@ -46,10 +83,11 @@ npm run lint
 - **Layout Pattern**: Server components for layouts, client components for interactive features
 
 ### Analytics Implementation
-- **Google Analytics 4**: Integrated with measurement ID `G-8SFBM8QD9M`
-- **Cookie Consent**: GDPR-compliant banner with localStorage persistence
-- **Event Tracking**: Custom events for forms, language switches, scroll depth, and CTAs
-- **Privacy Compliance**: Analytics only loads after user consent
+- **Google Analytics 4**: Hybrid implementation with measurement ID `G-8SFBM8QD9M`
+- **Hybrid Approach**: gtag.js in HTML head + react-ga4 for SPA tracking
+- **No Cookie Consent**: Site targets non-EU markets (removed per requirements)
+- **Event Tracking**: Custom events for forms, language switches, scroll depth (25%, 50%, 75%, 100%), and CTAs
+- **Environment Variable**: Set in buildspec.yml during CodeBuild process
 
 ### Static Export Configuration
 - Next.js configured for static export (`output: 'export'`)
@@ -77,17 +115,20 @@ npm run lint
    - Language switcher updates URL and reloads page to change locale
    - Translations loaded server-side and passed as props to avoid hydration issues
 
-3. **Analytics & Privacy**:
-   - Google Analytics only loads after user accepts cookies
+3. **Analytics**:
+   - Google Analytics loads immediately (no cookie consent - non-EU focus)
+   - Hybrid implementation: gtag.js for detection + react-ga4 for tracking
    - Custom event tracking throughout user journey
    - Scroll depth tracking at 25%, 50%, 75%, 100% milestones
    - All form submissions and CTA clicks are tracked
 
 4. **Deployment**:
-   - AWS S3 bucket: `kolf.app-production`
-   - CloudFront Distribution ID: `E3509NXA3EEV2A`
-   - Deploy script handles build, S3 sync, and CloudFront invalidation
-   - Cache headers optimized for static assets vs HTML
+   - **Automated**: AWS CodePipeline monitors GitHub and auto-deploys on push to main
+   - **Pipeline**: `kolf-marketing-pipeline-pipeline` in `ap-southeast-1` region
+   - **S3 Bucket**: `kolf.app-production`
+   - **CloudFront**: Distribution ID `E3509NXA3EEV2A`
+   - **Build Process**: CodeBuild uses `buildspec.yml` with environment variables
+   - **Cache Strategy**: HTML no-cache, assets cached for 1 year
 
 5. **Component Patterns**:
    - Use Framer Motion for animations (already configured)

@@ -271,10 +271,10 @@
       "error": "올바른 이메일을 입력해주세요"
     },
     "social": {
-      "twitter": "https://twitter.com/kolfgolf",
-      "linkedin": "https://linkedin.com/company/kolf",
-      "facebook": "https://facebook.com/kolfgolf",
-      "instagram": "https://instagram.com/kolfgolf"
+      "twitter": "#",
+      "linkedin": "#",
+      "facebook": "#",
+      "instagram": "#"
     },
     "copyright": "© 2025 Avenen Consulting. 모든 권리 보유. 아시아에서 골프의 미래를 만들고 있습니다.",
     "poweredBy": "Powered by Avenen Consulting - 골프 기술 선구자"
