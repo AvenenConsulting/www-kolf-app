@@ -9,9 +9,14 @@ function GoogleAnalyticsTracker({ GA_MEASUREMENT_ID }: { GA_MEASUREMENT_ID: stri
   const searchParams = useSearchParams()
 
   useEffect(() => {
-    // Don't initialize ReactGA since gtag is already initialized in the head
-    // Just use ReactGA for tracking page views and events
+    // Initialize ReactGA once (it will use the existing gtag)
     if (GA_MEASUREMENT_ID && typeof window !== 'undefined') {
+      // Only initialize once
+      if (!(window as any).GA_INITIALIZED) {
+        ReactGA.initialize(GA_MEASUREMENT_ID)
+        ;(window as any).GA_INITIALIZED = true
+      }
+      
       const url = pathname + (searchParams?.toString() ? `?${searchParams.toString()}` : '')
       ReactGA.send({ hitType: 'pageview', page: url })
     }

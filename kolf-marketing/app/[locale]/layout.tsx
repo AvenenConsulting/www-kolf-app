@@ -4,6 +4,8 @@ import '@/app/styles.css'
 import { notFound } from 'next/navigation'
 import { getTranslations } from '@/lib/translations'
 import { AnalyticsProvider } from '@/components/AnalyticsProvider'
+import { generateOrganizationSchema, generateSoftwareApplicationSchema, generateFAQSchema } from '@/lib/structured-data'
+import Script from 'next/script'
 
 export function generateStaticParams() {
   return [
@@ -112,6 +114,29 @@ export default async function LocaleLayout({
             />
           </>
         )}
+        
+        {/* Structured Data for SEO */}
+        <Script
+          id="organization-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateOrganizationSchema()),
+          }}
+        />
+        <Script
+          id="software-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateSoftwareApplicationSchema()),
+          }}
+        />
+        <Script
+          id="faq-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateFAQSchema()),
+          }}
+        />
       </head>
       <body className="antialiased">
         <AnalyticsProvider locale={locale}>
