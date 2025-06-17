@@ -266,5 +266,38 @@
     },
     "copyright": "© 2025 Avenen Consulting Co., Ltd. All rights reserved. Building the future of golf in Asia.",
     "poweredBy": "Powered by Avenen Consulting - Golf Technology Pioneers"
+  },
+  "leadCapture": {
+    "title": "Book Your Demo",
+    "subtitle": "See how KOLF can transform your golf course operations. Get personalized demo and early access benefits.",
+    "fields": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "courseName": "Golf Course Name",
+      "country": "Country",
+      "message": "Additional Information"
+    },
+    "placeholders": {
+      "name": "John Smith",
+      "email": "john@golfcourse.com",
+      "phone": "+66 123 456 789",
+      "courseName": "Royal Bangkok Golf Club",
+      "country": "Select your country",
+      "message": "Tell us about your needs (optional)"
+    },
+    "submit": "Book Demo Now",
+    "submitting": "Sending...",
+    "successTitle": "Demo Request Received!",
+    "successMessage": "We'll contact you within 24 hours to schedule your personalized demo.",
+    "errorMessage": "Something went wrong. Please try again or email us directly.",
+    "privacy": "By submitting, you agree to our privacy policy and terms of service.",
+    "errors": {
+      "nameRequired": "Please enter your name",
+      "emailRequired": "Please enter your email",
+      "emailInvalid": "Please enter a valid email",
+      "courseRequired": "Please enter your golf course name",
+      "countryRequired": "Please select your country"
+    }
   }
 }

@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Play, CheckCircle, TrendingUp, Users, Calendar } from 'lucide-react'
 import { Locale } from '@/lib/translations'
+import { useLeadCaptureModal } from './LeadCaptureProvider'
 
 interface HeroProps {
   locale: Locale
@@ -12,6 +13,7 @@ interface HeroProps {
 
 export default function Hero({ locale, translations: t }: HeroProps) {
   const [isVideoOpen, setIsVideoOpen] = useState(false)
+  const { openModal } = useLeadCaptureModal()
 
   const stats = [
     { icon: Users, label: t.hero.stats.courses.label, value: t.hero.stats.courses.value },
@@ -96,14 +98,14 @@ export default function Hero({ locale, translations: t }: HeroProps) {
               transition={{ delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12"
             >
-              <motion.a
-                href="#contact"
+              <motion.button
+                onClick={() => openModal('hero-primary')}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="btn-primary text-lg px-8 py-4 shadow-xl"
               >
                 {t.hero.cta.primary}
-              </motion.a>
+              </motion.button>
               <motion.button
                 onClick={() => setIsVideoOpen(true)}
                 whileHover={{ scale: 1.05 }}
