@@ -207,5 +207,12 @@
       "items": ["개인정보처리방침", "서비스 약관", "쿠키 정책"]
     },
     "copyright": "© 2025 Avenen Consulting. 모든 권리 보유."
+  },
+  "emailCapture": {
+    "title": "얼리 액세스 받기",
+    "placeholder": "이메일을 입력하세요",
+    "submit": "데모 액세스 받기",
+    "success": "감사합니다! 곧 연락드리겠습니다.",
+    "error": "올바른 이메일을 입력해주세요"
   }
 }

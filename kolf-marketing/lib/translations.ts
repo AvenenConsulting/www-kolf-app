@@ -494,6 +494,15 @@ export const translations = {
         items: ["นโยบายความเป็นส่วนตัว", "เงื่อนไขการให้บริการ", "นโยบายคุกกี้"]
       },
       copyright: "© 2025 Avenen Consulting สงวนลิขสิทธิ์"
+    },
+    
+    // Simple Email Capture
+    emailCapture: {
+      title: "รับสิทธิ์เข้าใช้งานก่อนใคร",
+      placeholder: "กรอกอีเมลของคุณ",
+      submit: "ขอรับการสาธิต",
+      success: "ขอบคุณ! เราจะติดต่อกลับเร็วๆ นี้",
+      error: "กรุณากรอกอีเมลที่ถูกต้อง"
     }
   },
   
@@ -721,6 +730,15 @@ export const translations = {
         items: ["개인정보 처리방침", "서비스 약관", "쿠키 정책"]
       },
       copyright: "© 2025 Avenen Consulting. 모든 권리 보유."
+    },
+    
+    // Simple Email Capture
+    emailCapture: {
+      title: "얼리 액세스 받기",
+      placeholder: "이메일을 입력하세요",
+      submit: "데모 액세스 받기",
+      success: "감사합니다! 곧 연락드리겠습니다.",
+      error: "올바른 이메일을 입력해주세요"
     }
   },
   
@@ -948,6 +966,15 @@ export const translations = {
         items: ["プライバシーポリシー", "利用規約", "クッキーポリシー"]
       },
       copyright: "© 2025 Avenen Consulting. 全著作権所有。"
+    },
+    
+    // Simple Email Capture
+    emailCapture: {
+      title: "早期アクセスを取得",
+      placeholder: "メールアドレスを入力",
+      submit: "デモアクセスを取得",
+      success: "ありがとうございます！すぐにご連絡いたします。",
+      error: "有効なメールアドレスを入力してください"
     }
   },
   
@@ -1175,6 +1202,15 @@ export const translations = {
         items: ["隐私政策", "服务条款", "Cookie政策"]
       },
       copyright: "© 2025 Avenen Consulting。保留所有权利。"
+    },
+    
+    // Simple Email Capture
+    emailCapture: {
+      title: "获取早期访问权限",
+      placeholder: "输入您的电子邮件",
+      submit: "获取演示访问权限",
+      success: "谢谢！我们会尽快与您联系。",
+      error: "请输入有效的电子邮件"
     }
   }
 }

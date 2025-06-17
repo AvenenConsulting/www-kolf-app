@@ -207,5 +207,12 @@
       "items": ["隐私政策", "服务条款", "Cookie政策"]
     },
     "copyright": "© 2025 Avenen Consulting。保留所有权利。"
+  },
+  "emailCapture": {
+    "title": "获取早期访问权限",
+    "placeholder": "输入您的电子邮件",
+    "submit": "获取演示访问权限",
+    "success": "谢谢！我们会尽快与您联系。",
+    "error": "请输入有效的电子邮件"
   }
 }

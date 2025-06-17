@@ -111,7 +111,7 @@ export default function Header({ locale, translations: t }: HeaderProps) {
                     {languages.map((lang) => (
                       <Link
                         key={lang.code}
-                        href={`/${lang.code}${pathname.slice(3)}`}
+                        href={`/${lang.code}`}
                         className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                       >
                         <div className="flex items-center space-x-3">
