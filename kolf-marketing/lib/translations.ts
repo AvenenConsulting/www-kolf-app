@@ -258,6 +258,15 @@ export const translations = {
         courseRequired: "Please enter your golf course name",
         countryRequired: "Please select your country"
       }
+    },
+    
+    // Simple Email Capture
+    emailCapture: {
+      title: "Get Early Access",
+      placeholder: "Enter your email",
+      submit: "Get Demo Access",
+      success: "Thanks! We'll be in touch soon.",
+      error: "Please enter a valid email"
     }
   },
   

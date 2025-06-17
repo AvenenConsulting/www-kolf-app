@@ -6,7 +6,6 @@ import { usePathname } from 'next/navigation'
 import { Menu, X, Globe, ChevronDown } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Locale } from '@/lib/translations'
-import { useLeadCaptureModal } from './LeadCaptureProvider'
 
 const languages = [
   { code: 'en', name: 'English', flag: '🇺🇸' },
@@ -26,7 +25,6 @@ export default function Header({ locale, translations: t }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isLangOpen, setIsLangOpen] = useState(false)
   const pathname = usePathname()
-  const { openModal } = useLeadCaptureModal()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -133,14 +131,14 @@ export default function Header({ locale, translations: t }: HeaderProps) {
             <Link href={`/${locale}/login`} className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200">
               {t.nav.login}
             </Link>
-            <motion.button
-              onClick={() => openModal('header-demo')}
+            <motion.a
+              href="#hero"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="btn-primary"
             >
               {t.nav.demo}
-            </motion.button>
+            </motion.a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -180,15 +178,13 @@ export default function Header({ locale, translations: t }: HeaderProps) {
                     >
                       {t.nav.login}
                     </Link>
-                    <button
-                      onClick={() => {
-                        openModal('header-mobile-demo')
-                        setIsOpen(false)
-                      }}
-                      className="block w-full btn-primary text-center"
+                    <a
+                      href="#hero"
+                      className="block btn-primary text-center"
+                      onClick={() => setIsOpen(false)}
                     >
                       {t.nav.demo}
-                    </button>
+                    </a>
                   </div>
                 </div>
               </nav>

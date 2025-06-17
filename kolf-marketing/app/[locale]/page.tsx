@@ -8,7 +8,6 @@ import Pricing from '@/components/PricingSimple'
 import Testimonials from '@/components/TestimonialsSimple'
 import Contact from '@/components/ContactSimple'
 import Footer from '@/components/FooterSimple'
-import { LeadCaptureProvider } from '@/components/LeadCaptureProvider'
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale: localeParam } = await params
@@ -21,17 +20,15 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
   const t = getTranslations(locale)
 
   return (
-    <LeadCaptureProvider locale={locale} translations={t}>
-      <main className="min-h-screen">
-        <Header locale={locale} translations={t} />
-        <Hero locale={locale} translations={t} />
-        <Features locale={locale} translations={t} />
-        <Benefits locale={locale} translations={t} />
-        <Pricing locale={locale} translations={t} />
-        <Testimonials locale={locale} translations={t} />
-        <Contact locale={locale} translations={t} />
-        <Footer locale={locale} translations={t} />
-      </main>
-    </LeadCaptureProvider>
+    <main className="min-h-screen">
+      <Header locale={locale} translations={t} />
+      <Hero locale={locale} translations={t} />
+      <Features locale={locale} translations={t} />
+      <Benefits locale={locale} translations={t} />
+      <Pricing locale={locale} translations={t} />
+      <Testimonials locale={locale} translations={t} />
+      <Contact locale={locale} translations={t} />
+      <Footer locale={locale} translations={t} />
+    </main>
   )
 }
