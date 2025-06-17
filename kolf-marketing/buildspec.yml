@@ -1,0 +1,42 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Installing dependencies...
+      - cd kolf-marketing
+      - npm ci --prefer-offline --no-audit
+      - echo Dependencies installed successfully
+  
+  build:
+    commands:
+      - echo Running linting...
+      - npm run lint || true  # Continue even if linting has warnings
+      - echo Building application...
+      - npm run build
+      - echo Build completed successfully
+  
+  post_build:
+    commands:
+      - echo Verifying build output...
+      - |
+        if [ ! -d "out" ]; then
+          echo "Build failed: 'out' directory not found"
+          exit 1
+        fi
+      - echo Build artifacts verified
+      - echo Deploying to S3...
+      - aws s3 sync out/ s3://kolf.app-production --delete
+      - echo Creating CloudFront invalidation...
+      - aws cloudfront create-invalidation --distribution-id E3509NXA3EEV2A --paths "/*"
+      - echo Deployment completed successfully
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: kolf-marketing/out
+  name: kolf-marketing-build
+
+cache:
+  paths:
+    - 'kolf-marketing/node_modules/**/*'

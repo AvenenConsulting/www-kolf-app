@@ -84,7 +84,7 @@ export const translations = {
     benefits: {
       badge: "Why Choose KOLF",
       title: "Built by Golf Insiders for Asian Excellence",
-      subtitle: "Our founding team combines 50+ years of Asian golf expertise with Silicon Valley innovation - creating the platform golf courses have been waiting for",
+      subtitle: "Our founding team combines 40+ years of Golf Software experience - creating the platform golf courses have been waiting for",
       items: [
         {
           title: "Built for Asia",
