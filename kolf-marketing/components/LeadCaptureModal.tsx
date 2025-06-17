@@ -74,24 +74,31 @@ export default function LeadCaptureModal({
     setStatus('loading')
     
     try {
-      // Using Formspree as a simple form backend
-      const formId = process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID || 'xgvenjad'
-      const response = await fetch(`https://formspree.io/f/${formId}`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          ...formData,
-          source,
-          locale,
-          timestamp: new Date().toISOString(),
-          userAgent: navigator.userAgent
-        })
-      })
+      // Temporary solution: Send via email
+      const subject = `KOLF Demo Request from ${formData.name}`
+      const body = `
+New Demo Request from KOLF Website
+
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone || 'Not provided'}
+Golf Course: ${formData.courseName}
+Country: ${formData.country}
+Message: ${formData.message || 'No additional message'}
+
+Source: ${source}
+Language: ${locale}
+Timestamp: ${new Date().toISOString()}
+      `.trim()
       
-      if (response.ok) {
+      // Create mailto link
+      const mailtoLink = `mailto:info@avenen.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+      
+      // Open email client
+      window.location.href = mailtoLink
+      
+      // Simulate success (since we can't know if email was sent)
+      setTimeout(() => {
         setStatus('success')
         
         // Track conversion in Google Analytics if available
@@ -116,9 +123,7 @@ export default function LeadCaptureModal({
           setStatus('idle')
           onClose()
         }, 3000)
-      } else {
-        setStatus('error')
-      }
+      }, 500)
     } catch (error) {
       setStatus('error')
     }

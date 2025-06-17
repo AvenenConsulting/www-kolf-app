@@ -5,7 +5,7 @@ Parameters:
   GitHubOwner:
     Type: String
     Description: GitHub repository owner
-    Default: 'antti'
+    Default: 'AvenenConsulting'
   
   GitHubRepo:
     Type: String

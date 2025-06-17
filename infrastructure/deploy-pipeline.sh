@@ -21,7 +21,7 @@ TEMPLATE_FILE="infrastructure/codepipeline.yaml"
 REGION="${AWS_REGION:-ap-southeast-1}"
 
 # Optional: Override default parameters
-GITHUB_OWNER="${GITHUB_OWNER:-antti}"
+GITHUB_OWNER="${GITHUB_OWNER:-AvenenConsulting}"
 GITHUB_REPO="${GITHUB_REPO:-www-kolf-app}"
 GITHUB_BRANCH="${GITHUB_BRANCH:-main}"
 
