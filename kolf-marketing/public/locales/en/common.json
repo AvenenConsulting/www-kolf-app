@@ -1,12 +1,12 @@
 {
   "nav": {
-    "features": "Features",
-    "benefits": "Benefits",
+    "features": "Platform",
+    "benefits": "Why KOLF",
     "pricing": "Pricing",
-    "testimonials": "Testimonials",
-    "contact": "Contact",
+    "testimonials": "Early Access",
+    "contact": "Get Started",
     "login": "Login",
-    "demo": "Get a Demo"
+    "demo": "Book Demo"
   },
   "hero": {
     "badge": "🚧 Building for 500+ Golf Courses Across Asia 🚧",

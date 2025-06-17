@@ -2,13 +2,13 @@ export const translations = {
   en: {
     // Header
     nav: {
-      features: "Features",
+      features: "Platform",
       benefits: "Why KOLF", 
-      pricing: "Early Access",
-      testimonials: "Success Stories",
-      contact: "Contact",
-      login: "Partner Login",
-      demo: "Join Waitlist"
+      pricing: "Pricing",
+      testimonials: "Early Access",
+      contact: "Get Started",
+      login: "Login",
+      demo: "Book Demo"
     },
     
     // Hero Section
