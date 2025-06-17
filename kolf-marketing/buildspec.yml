@@ -5,6 +5,8 @@ phases:
     commands:
       - echo Installing dependencies...
       - cd kolf-marketing
+      - echo "Creating .env.local file..."
+      - echo "NEXT_PUBLIC_GA_MEASUREMENT_ID=G-8SFBM8QD9M" > .env.local
       - npm ci --prefer-offline --no-audit
       - echo Dependencies installed successfully
   
