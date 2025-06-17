@@ -110,56 +110,52 @@
     "subtitle": "Lock in special founder pricing and be first to experience the future of golf management",
     "monthly": "Monthly",
     "yearly": "Yearly (Save 20%)",
-    "plans": [
-      {
-        "name": "Pioneer",
-        "description": "Perfect for boutique courses ready to innovate",
-        "price": { "monthly": 199, "yearly": 159, "currency": "$" },
-        "cta": "🎯 Reserve My Spot",
+    "plans": {
+      "starter": {
+        "title": "📲 VIP Waitlist",
+        "price": "Free",
+        "description": "Exclusive early access to the beta platform",
         "features": [
-          "🚀 Beta access Q2 2025",
-          "🤖 AI-powered tee times",
-          "👥 Smart member management",
-          "📱 Mobile-first experience",
-          "📧 Priority email support",
-          "🎁 Founder badge & perks"
-        ]
+          "🏆 Exclusive beta access",
+          "📧 Priority development updates",
+          "📞 Direct founder communication",
+          "🎁 Launch day benefits"
+        ],
+        "cta": "Join Waitlist"
       },
-      {
-        "name": "Innovator",
-        "description": "Most popular - for serious growth",
-        "price": { "monthly": 399, "yearly": 319, "currency": "$" },
-        "cta": "🔥 Claim Best Value",
-        "popular": true,
-        "badge": "🏆 BEST VALUE",
+      "professional": {
+        "title": "🚀 Beta Partner",
+        "price": "50% OFF",
+        "period": "Founder pricing",
+        "description": "Become a founding customer with exclusive benefits",
         "features": [
-          "✨ Everything in Pioneer",
-          "🌟 Revolutionary caddie AI",
-          "💰 Dynamic pricing engine",
-          "🏆 Tournament platform",
-          "🌏 Tour operator portal",
-          "☎️ 24/7 phone support",
-          "👨‍💼 Success manager",
-          "⚡ API access"
-        ]
+          "🔥 Full beta platform access",
+          "📊 Dedicated success manager",
+          "🏗️ Custom feature requests",
+          "💰 Locked-in founder pricing",
+          "🎆 Launch event invitations",
+          "🚀 Co-marketing opportunities",
+          "🏆 Lifetime founder badge"
+        ],
+        "cta": "Become a Founder",
+        "popular": true
       },
-      {
-        "name": "Visionary",
-        "description": "For market leaders & multi-property groups",
-        "price": { "custom": true },
-        "cta": "💬 Let's Talk",
+      "enterprise": {
+        "title": "🏆 Strategic Partner",
+        "price": "Invitation Only",
+        "description": "Exclusive partnership for golf industry leaders",
         "features": [
-          "🏢 Multi-property dashboard",
-          "🤖 Custom AI training",
-          "👩‍💻 Dedicated dev team",
-          "🎓 Executive training",
-          "📊 Advanced analytics",
-          "🛡️ 99.9% SLA guarantee",
-          "🏷️ White-label option",
-          "💎 Revenue optimization"
-        ]
+          "🤝 Strategic partner status",
+          "🔧 Platform co-development input",
+          "📢 Joint marketing opportunities",
+          "🎯 White-label possibilities",
+          "📞 Direct founder hotline",
+          "🌍 Regional exclusivity options",
+          "💵 Revenue sharing program"
+        ],
+        "cta": "Apply for Partnership"
       }
-    ]
+    }
   },
   "testimonials": {
     "badge": "🌟 Industry Leaders are Excited",
@@ -189,6 +185,22 @@
       }
     ]
   },
+  "contact": {
+    "badge": "🏆 Join the Revolution",
+    "title": "Secure Your VIP Early Access Now",
+    "subtitle": "Limited spots for beta program! Be among the first to experience the future of golf management in Asia",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "course": "Golf Course Name",
+      "role": "Your Position",
+      "message": "Why do you want early access?",
+      "submit": "🚀 Join VIP Waitlist",
+      "submitting": "Securing your spot...",
+      "success": "Welcome to the KOLF revolution! Check your email for exclusive updates"
+    }
+  },
   "cta": {
     "badge": "⏰ Limited Time - Founder Spots Available",
     "title": "🚀 Ready to Revolutionize Your Golf Business?",
@@ -211,45 +223,23 @@
     ]
   },
   "footer": {
-    "description": "KOLF - The future of golf management, built exclusively for Asia. Currently in development, launching Q2 2025.",
-    "sections": [
-      {
-        "title": "Product",
-        "items": [
-          { "text": "Features", "href": "#features" },
-          { "text": "Benefits", "href": "#benefits" },
-          { "text": "Pricing", "href": "#pricing" },
-          { "text": "Roadmap", "href": "#" }
-        ]
-      },
-      {
-        "title": "Company",
-        "items": [
-          { "text": "About Avenen", "href": "#" },
-          { "text": "Careers", "href": "#" },
-          { "text": "Press Kit", "href": "#" },
-          { "text": "Contact", "href": "#" }
-        ]
-      },
-      {
-        "title": "Resources",
-        "items": [
-          { "text": "Blog", "href": "#" },
-          { "text": "Help Center", "href": "#" },
-          { "text": "API Docs", "href": "#" },
-          { "text": "Status", "href": "#" }
-        ]
-      },
-      {
-        "title": "Legal",
-        "items": [
-          { "text": "Privacy", "href": "#" },
-          { "text": "Terms", "href": "#" },
-          { "text": "Security", "href": "#" },
-          { "text": "Compliance", "href": "#" }
-        ]
-      }
-    ],
+    "tagline": "The complete golf course management solution for Asia",
+    "products": {
+      "title": "Products",
+      "items": ["Tee Time Booking", "Caddie Management", "Member Portal", "Tournament Platform", "Dynamic Pricing", "Analytics Dashboard"]
+    },
+    "company": {
+      "title": "Company",
+      "items": ["About Us", "Contact", "Careers", "Press Kit", "Partners"]
+    },
+    "support": {
+      "title": "Support",
+      "items": ["Documentation", "API Reference", "System Status", "Contact Support"]
+    },
+    "legal": {
+      "title": "Legal",
+      "items": ["Privacy Policy", "Terms of Service", "Cookie Policy"]
+    },
     "newsletter": {
       "title": "🚀 Get Golf Innovation Updates",
       "subtitle": "Monthly insights on golf tech and early access perks",
