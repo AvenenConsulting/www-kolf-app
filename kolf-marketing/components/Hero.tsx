@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { Play, CheckCircle, TrendingUp, Users, Calendar } from 'lucide-react'
 import { Locale } from '@/lib/translations'
 import SimpleEmailCapture from './SimpleEmailCapture'
+import { trackCTAClick } from '@/lib/analytics'
 
 interface HeroProps {
   locale: Locale

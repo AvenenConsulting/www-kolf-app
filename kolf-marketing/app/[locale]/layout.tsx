@@ -3,6 +3,7 @@ import '@/app/globals.css'
 import '@/app/styles.css'
 import { notFound } from 'next/navigation'
 import { getTranslations } from '@/lib/translations'
+import { AnalyticsProvider } from '@/components/AnalyticsProvider'
 
 export function generateStaticParams() {
   return [
@@ -79,6 +80,9 @@ export default async function LocaleLayout({
     notFound()
   }
 
+  const t = getTranslations(locale as any)
+  const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+
   return (
     <html lang={locale}>
       <head>
@@ -89,9 +93,30 @@ export default async function LocaleLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
+        
+        {GA_MEASUREMENT_ID && (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${GA_MEASUREMENT_ID}');
+                `,
+              }}
+            />
+          </>
+        )}
       </head>
       <body className="antialiased">
-        {children}
+        <AnalyticsProvider locale={locale}>
+          {children}
+        </AnalyticsProvider>
       </body>
     </html>
   )

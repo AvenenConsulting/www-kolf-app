@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation'
 import { Menu, X, Globe, ChevronDown } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Locale } from '@/lib/translations'
+import { trackLanguageSwitch } from '@/lib/analytics'
 
 const languages = [
   { code: 'en', name: 'English', flag: '🇺🇸' },
@@ -113,6 +114,7 @@ export default function Header({ locale, translations: t }: HeaderProps) {
                         key={lang.code}
                         href={`/${lang.code}`}
                         className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        onClick={() => trackLanguageSwitch(locale, lang.code)}
                       >
                         <div className="flex items-center space-x-3">
                           <span className="text-lg">{lang.flag}</span>

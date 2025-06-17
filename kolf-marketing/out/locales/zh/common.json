@@ -214,5 +214,11 @@
     "submit": "获取演示访问权限",
     "success": "谢谢！我们会尽快与您联系。",
     "error": "请输入有效的电子邮件"
+  },
+  "cookieConsent": {
+    "title": "Cookie设置",
+    "description": "我们使用Cookie来改善您在我们网站上的体验。继续浏览即表示您同意我们使用Cookie。",
+    "accept": "全部接受",
+    "decline": "拒绝"
   }
 }

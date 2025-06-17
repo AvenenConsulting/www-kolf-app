@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Mail } from 'lucide-react'
+import { trackFormSubmission, trackDemoRequest } from '@/lib/analytics'
 
 interface SimpleEmailCaptureProps {
   locale: string
@@ -11,6 +12,13 @@ interface SimpleEmailCaptureProps {
 
 export default function SimpleEmailCapture({ locale, translations: t, source = 'website' }: SimpleEmailCaptureProps) {
   const [email, setEmail] = useState('')
+
+  const handleSubmit = (e: React.FormEvent) => {
+    // Track the form submission
+    trackFormSubmission(`email_capture_${source}`)
+    trackDemoRequest(source)
+    // Let the form submit naturally to Formspree
+  }
 
   return (
     <div className="bg-primary-50 rounded-lg p-6 max-w-md mx-auto">
@@ -22,6 +30,7 @@ export default function SimpleEmailCapture({ locale, translations: t, source = '
         action="https://formspree.io/f/xnnvzagd" 
         method="POST"
         className="space-y-4"
+        onSubmit={handleSubmit}
       >
         {/* Hidden fields for metadata */}
         <input type="hidden" name="_subject" value={`New KOLF Demo Request from ${source}`} />

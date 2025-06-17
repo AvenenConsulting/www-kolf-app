@@ -306,5 +306,11 @@
     "submit": "Get Demo Access",
     "success": "Thanks! We'll be in touch soon.",
     "error": "Please enter a valid email"
+  },
+  "cookieConsent": {
+    "title": "Cookie Preferences",
+    "description": "We use cookies to enhance your browsing experience and analyze site traffic. By clicking \"Accept\", you consent to our use of cookies.",
+    "accept": "Accept",
+    "decline": "Decline"
   }
 }
