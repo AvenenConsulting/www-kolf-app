@@ -276,8 +276,8 @@
       "facebook": "#",
       "instagram": "#"
     },
-    "copyright": "© 2025 Avenen Consulting. 모든 권리 보유. 아시아에서 골프의 미래를 만들고 있습니다.",
-    "poweredBy": "Powered by Avenen Consulting - 골프 기술 선구자"
+    "copyright": "© 2025 Avenen. 모든 권리 보유. 아시아에서 골프의 미래를 만들고 있습니다.",
+    "poweredBy": "Powered by Avenen - 골프 기술 선구자"
   },
   "emailCapture": {
     "title": "얼리 액세스 받기",
@@ -291,5 +291,14 @@
     "description": "저희는 귀하의 브라우징 경험을 향상시키고 사이트 트래픽을 분석하기 위해 쿠키를 사용합니다. \"수락\"을 클릭하시면 쿠키 사용에 동의하시는 것입니다.",
     "accept": "수락",
     "decline": "거부"
+  },
+  "productWindow": {
+    "realtime": "실시간 업데이트",
+    "bookings": "오늘의 예약",
+    "revenue": "오늘의 매출",
+    "occupancy": "점유율",
+    "confirmed": "확정됨",
+    "pending": "대기 중",
+    "revenueBoost": "+30% 매출 증가"
   }
 }

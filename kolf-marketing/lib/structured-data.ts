@@ -11,7 +11,7 @@ export function generateOrganizationSchema() {
     founders: [
       {
         '@type': 'Organization',
-        name: 'Avenen Consulting Co., Ltd.',
+        name: 'Avenen Co., Ltd.',
       },
     ],
     address: {

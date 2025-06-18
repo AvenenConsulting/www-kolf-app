@@ -9,6 +9,7 @@ import { notFound } from 'next/navigation'
 import { AnalyticsProvider } from '@/components/AnalyticsProvider'
 import { generateOrganizationSchema, generateSoftwareApplicationSchema, generateFAQSchema } from '@/lib/structured-data'
 import Script from 'next/script'
+import PerformanceMonitorClient from '@/components/PerformanceMonitorClient'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -53,8 +54,6 @@ export async function generateMetadata({ params: { locale } }: RootLayoutProps):
 }
 
 export default function RootLayout({ children, params: { locale } }: RootLayoutProps) {
-  usePerformanceMonitor()
-
   return (
     <html lang={locale}>
       <head>
@@ -90,6 +89,7 @@ export default function RootLayout({ children, params: { locale } }: RootLayoutP
         />
       </head>
       <body className={inter.className}>
+        <PerformanceMonitorClient />
         <ErrorBoundary>
           <AnalyticsProvider locale={locale}>
             {children}

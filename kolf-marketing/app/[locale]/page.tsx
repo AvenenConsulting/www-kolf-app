@@ -32,3 +32,13 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
     </main>
   )
 }
+
+export function generateStaticParams() {
+  return [
+    { locale: 'en' },
+    { locale: 'th' },
+    { locale: 'ko' },
+    { locale: 'ja' },
+    { locale: 'zh' }
+  ];
+}

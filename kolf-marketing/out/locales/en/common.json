@@ -254,8 +254,8 @@
       "facebook": "#",
       "instagram": "#"
     },
-    "copyright": "© 2025 Avenen Consulting Co., Ltd. All rights reserved. Building the future of golf in Asia.",
-    "poweredBy": "Powered by Avenen Consulting - Golf Technology Pioneers"
+    "copyright": "© 2025 Avenen. All rights reserved. Building the future of golf in Asia.",
+    "poweredBy": "Powered by Avenen - Golf Technology Pioneers"
   },
   "leadCapture": {
     "title": "Book Your Demo",
@@ -302,5 +302,14 @@
     "description": "We use cookies to enhance your browsing experience and analyze site traffic. By clicking \"Accept\", you consent to our use of cookies.",
     "accept": "Accept",
     "decline": "Decline"
+  },
+  "productWindow": {
+    "realtime": "Real-time Updates",
+    "bookings": "Today's Bookings",
+    "revenue": "Daily Revenue",
+    "occupancy": "Occupancy",
+    "confirmed": "Confirmed",
+    "pending": "Pending",
+    "revenueBoost": "+30% Revenue"
   }
 }

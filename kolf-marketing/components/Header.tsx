@@ -82,7 +82,7 @@ export default function Header({ locale, translations: t }: HeaderProps) {
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-xl text-gray-900">KOLF</span>
-              <span className="text-xs text-gray-500 -mt-1">by Avenen Consulting</span>
+              <span className="text-xs text-gray-500 -mt-1">by Avenen</span>
             </div>
           </motion.div>
 
