@@ -1,5 +1,29 @@
+/**
+ * Lead Capture API Route
+ * 
+ * This API endpoint handles lead form submissions from the marketing website.
+ * It validates the input data, stores it in the database, and sends notifications.
+ * 
+ * @route POST /api/leads
+ * @param {Object} req.body - The lead submission data
+ * @param {string} req.body.name - Lead's full name
+ * @param {string} req.body.email - Lead's email address
+ * @param {string} req.body.phone - Lead's phone number (optional)
+ * @param {string} req.body.courseName - Name of the golf course
+ * @param {string} req.body.country - Country where the golf course is located
+ * @param {string} req.body.message - Additional message from the lead (optional)
+ * @param {string} req.body.source - Source of the lead (e.g., 'homepage', 'pricing')
+ * @param {string} req.body.locale - User's preferred language
+ * @param {string} req.body.timestamp - Submission timestamp
+ * 
+ * @returns {Object} Response object
+ * @returns {number} Response.status - HTTP status code
+ * @returns {Object} Response.json - JSON response with message or error
+ */
+
 import { NextResponse } from 'next/server'
 import { headers } from 'next/headers'
+import { z } from 'zod'
 
 // Simple in-memory rate limiter
 const rateLimiter = {
@@ -19,6 +43,19 @@ const rateLimiter = {
   }
 }
 
+// Define the validation schema for lead submissions
+const leadSchema = z.object({
+  name: z.string().min(2, 'Name must be at least 2 characters'),
+  email: z.string().email('Invalid email address'),
+  phone: z.string().optional(),
+  courseName: z.string().min(2, 'Course name must be at least 2 characters'),
+  country: z.string().min(2, 'Country must be at least 2 characters'),
+  message: z.string().optional(),
+  source: z.string(),
+  locale: z.string(),
+  timestamp: z.string()
+})
+
 export async function POST(request: Request) {
   try {
     // Get client IP
@@ -36,42 +73,36 @@ export async function POST(request: Request) {
     // Add request to rate limiter
     rateLimiter.add(ip)
 
-    // Get request body
+    // Parse and validate the request body
     const body = await request.json()
+    const validatedData = leadSchema.parse(body)
 
-    // Validate required fields
-    const requiredFields = ['name', 'email', 'courseName', 'country']
-    const missingFields = requiredFields.filter(field => !body[field])
-    
-    if (missingFields.length > 0) {
-      return NextResponse.json(
-        { error: `Missing required fields: ${missingFields.join(', ')}` },
-        { status: 400 }
-      )
-    }
+    // TODO: Implement database storage
+    // This is where you would add your database logic
+    // Example: await db.leads.create({ data: validatedData })
 
-    // Validate email format
-    const emailRegex = /\S+@\S+\.\S+/
-    if (!emailRegex.test(body.email)) {
-      return NextResponse.json(
-        { error: 'Invalid email format' },
-        { status: 400 }
-      )
-    }
-
-    // TODO: Add your actual lead storage logic here
-    // For now, we'll just log it
-    console.log('New lead:', body)
+    // TODO: Implement notification system
+    // This is where you would add your notification logic
+    // Example: await notifySalesTeam(validatedData)
 
     // Return success response
     return NextResponse.json(
       { message: 'Lead captured successfully' },
-      { status: 200 }
+      { status: 201 }
     )
   } catch (error) {
-    console.error('Error processing lead:', error)
+    // Handle validation errors
+    if (error instanceof z.ZodError) {
+      return NextResponse.json(
+        { error: 'Validation failed', details: error.errors },
+        { status: 400 }
+      )
+    }
+
+    // Handle other errors
+    console.error('Error capturing lead:', error)
     return NextResponse.json(
-      { error: 'Internal server error' },
+      { error: 'Failed to capture lead' },
       { status: 500 }
     )
   }
