@@ -267,6 +267,17 @@ export const translations = {
       submit: "Get Demo Access",
       success: "Thanks! We'll be in touch soon.",
       error: "Please enter a valid email"
+    },
+    
+    // Product Window
+    productWindow: {
+      realtime: "Real-time Updates",
+      bookings: "Today's Bookings",
+      revenue: "Daily Revenue",
+      occupancy: "Occupancy",
+      confirmed: "Confirmed",
+      pending: "Pending",
+      revenueBoost: "+30% Revenue"
     }
   },
   
@@ -503,6 +514,17 @@ export const translations = {
       submit: "ขอรับการสาธิต",
       success: "ขอบคุณ! เราจะติดต่อกลับเร็วๆ นี้",
       error: "กรุณากรอกอีเมลที่ถูกต้อง"
+    },
+    
+    // Product Window
+    productWindow: {
+      realtime: "อัปเดตแบบเรียลไทม์",
+      bookings: "การจองวันนี้",
+      revenue: "รายได้วันนี้",
+      occupancy: "อัตราการใช้บริการ",
+      confirmed: "ยืนยันแล้ว",
+      pending: "รอดำเนินการ",
+      revenueBoost: "+30% รายได้เพิ่มขึ้น"
     }
   },
   
@@ -553,10 +575,10 @@ export const translations = {
       subtitle: "현지 요구사항에 대한 깊은 이해를 바탕으로 아시아 골프 운영을 위해 특별히 제작",
       stats: [
         { value: "500+", label: "골프장", sublabel: "아시아 전역" },
-        { value: "100만+", label: "월간 예약", sublabel: "원활하게 처리" },
+        { value: "100만+", label: "월간 예약", sublabel: "스무스에 처리" },
         { value: "99.9%", label: "가동 시간", sublabel: "SLA 보장" },
         { value: "30%", label: "수익 증가", sublabel: "평균 개선" },
-        { value: "80%", label: "노쇼 감소", sublabel: "자동화를 통해" },
+        { value: "80%", label: "노쇼 감소", sublabel: "자동화에 의해" },
         { value: "15시간", label: "시간 절약", sublabel: "주당 코스당" }
       ],
       operations: {
@@ -650,7 +672,7 @@ export const translations = {
         enterprise: {
           title: "엔터프라이즈",
           price: "맞춤형",
-          description: "대규모 골프 운영을 위한 고급 기능",
+          description: "대규모 골프 운영의 고급 기능",
           features: [
             "다중 코스 지원",
             "맞춤 통합",
@@ -669,10 +691,10 @@ export const translations = {
     testimonials: {
       badge: "고객이 말하는 것",
       title: "아시아 전역 골프장의 신뢰",
-      subtitle: "KOLF로 운영을 혁신한 수백 개의 만족한 골프장과 함께하세요",
+      subtitle: "KOLF로 운영을 변화시킨 수백 개의 만족한 골프장에 참여하세요",
       items: [
         {
-          quote: "KOLF는 우리의 운영을 완전히 변화시켰습니다. 캐디 관리 시스템만으로도 주당 20시간을 절약했고, 구현 이후 수익이 35% 증가했습니다.",
+          quote: "KOLF는 우리의 운영을 완전히 변화시키고 캐디 관리 시스템만으로도 주당 20시간을 절약했고, 구현 이후 수익이 35% 증가했습니다.",
           author: "박정훈",
           role: "총지배인",
           course: "서울 골프 클럽"
@@ -695,8 +717,8 @@ export const translations = {
     // Contact Section
     contact: {
       badge: "오늘 시작하세요",
-      title: "골프장을 혁신할 준비가 되었나요?",
-      subtitle: "무료 데모를 예약하고 KOLF가 어떻게 골프장 운영을 혁신할 수 있는지 확인해보세요",
+      title: "골프장을 변화시킬 준비가 되었나요?",
+      subtitle: "무료 데모를 예약하고 KOLF가 어떻게 골프장 운영을 변화시킬 수 있는지 확인해보세요",
       form: {
         name: "성명",
         email: "이메일 주소",
@@ -727,9 +749,9 @@ export const translations = {
       },
       legal: {
         title: "법적 사항",
-        items: ["개인정보 처리방침", "서비스 약관", "쿠키 정책"]
+        items: ["개인정보 처리방침", "이용약관", "쿠키 정책"]
       },
-      copyright: "© 2025 Avenen Consulting. 모든 권리 보유."
+      copyright: "© 2025 Avenen Consulting. 전 저작권 보유."
     },
     
     // Simple Email Capture
@@ -738,7 +760,18 @@ export const translations = {
       placeholder: "이메일을 입력하세요",
       submit: "데모 액세스 받기",
       success: "감사합니다! 곧 연락드리겠습니다.",
-      error: "올바른 이메일을 입력해주세요"
+      error: "유효한 이메일을 입력해주세요"
+    },
+    
+    // Product Window
+    productWindow: {
+      realtime: "Real-time Updates",
+      bookings: "Today's Bookings",
+      revenue: "Daily Revenue",
+      occupancy: "Occupancy",
+      confirmed: "Confirmed",
+      pending: "Pending",
+      revenueBoost: "+30% Revenue"
     }
   },
   
@@ -811,8 +844,8 @@ export const translations = {
           },
           {
             title: "メンバー管理",
-            description: "マルチティアメンバーシップ、ハンディキャップ追跡、ゲスト特典",
-            features: ["WHSハンディキャップ準拠", "複数のメンバーシップティア", "ゲストパス管理"]
+            description: "多層会員制、スター差追跡、ゲスト特典",
+            features: ["WHSスター差準拠", "複数のメンバーシップティア", "ゲストパス管理"]
           },
           {
             title: "トーナメントプラットフォーム",
@@ -860,9 +893,9 @@ export const translations = {
           description: "始めたばかりの小規模ゴルフ場に最適",
           features: [
             "月最大50件の予約",
-            "基本的なティータイム管理",
-            "メンバーデータベース",
-            "メールサポート"
+            "基本開球時間管理",
+            "会員データベース",
+            "電子メールサポート"
           ],
           cta: "始める"
         },
@@ -873,7 +906,7 @@ export const translations = {
           description: "繁栄するゴルフ場に必要なすべて",
           features: [
             "無制限の予約",
-            "高度なティータイムとキャディ管理",
+            "高度な開球時間とキャディ管理",
             "動的価格エンジン",
             "トーナメントプラットフォーム",
             "APIアクセス",
@@ -914,13 +947,13 @@ export const translations = {
           course: "東京ゴルフクラブ"
         },
         {
-          quote: "多言語サポートは素晴らしいです。韓国人と日本人のゲストが母国語で予約できることを喜んでいます。国際予約が40％増加しました。",
+          quote: "多言語サポートは素晴らしいです。韓国人と日本人のゲストが母国語で予約できることを喜んでいます。これにより国際予約が40％増加しました。",
           author: "山田太郎",
           role: "運営ディレクター",
           course: "大阪国際ゴルフリゾート"
         },
         {
-          quote: "ダイナミックプライシングはゲームチェンジャーでした。ピーク時に収益を最大化しながら、オフピーク時のスロットを埋めています。本当に素晴らしい！",
+          quote: "動的価格設定はゲームチェンジャーでした。これによりピーク時に収益を最大化しながら、オフピーク時のスロットを埋めています。本当に素晴らしい！",
           author: "佐藤健一",
           role: "オーナー",
           course: "北海道ハイランド"
@@ -951,7 +984,7 @@ export const translations = {
       tagline: "アジアのための完全なゴルフ場管理ソリューション",
       products: {
         title: "製品",
-        items: ["ティータイム予約", "キャディ管理", "メンバーポータル", "トーナメントプラットフォーム", "動的価格", "分析ダッシュボード"]
+        items: ["開球時間予約", "キャディ管理", "メンバーポータル", "トーナメントプラットフォーム", "動的価格", "分析ダッシュボード"]
       },
       company: {
         title: "会社",
@@ -963,7 +996,7 @@ export const translations = {
       },
       legal: {
         title: "法的事項",
-        items: ["プライバシーポリシー", "利用規約", "クッキーポリシー"]
+        items: ["個人情報処理方針", "利用規約", "クッキーポリシー"]
       },
       copyright: "© 2025 Avenen Consulting. 全著作権所有。"
     },
@@ -975,6 +1008,17 @@ export const translations = {
       submit: "デモアクセスを取得",
       success: "ありがとうございます！すぐにご連絡いたします。",
       error: "有効なメールアドレスを入力してください"
+    },
+    
+    // Product Window
+    productWindow: {
+      realtime: "リアルタイム更新",
+      bookings: "本日の予約数",
+      revenue: "本日の売上",
+      occupancy: "稼働率",
+      confirmed: "確定",
+      pending: "保留中",
+      revenueBoost: "+30% 売上増"
     }
   },
   
@@ -1177,7 +1221,7 @@ export const translations = {
         role: "您的职位",
         message: "告诉我们您的需求",
         submit: "预约演示",
-        submitting: "提交中...",
+        submitting: "送信中...",
         success: "谢谢！我们将在24小时内与您联系。"
       }
     },
@@ -1211,6 +1255,17 @@ export const translations = {
       submit: "获取演示访问权限",
       success: "谢谢！我们会尽快与您联系。",
       error: "请输入有效的电子邮件"
+    },
+    
+    // Product Window
+    productWindow: {
+      realtime: "实时更新",
+      bookings: "今日预订",
+      revenue: "今日收入",
+      occupancy: "入住率",
+      confirmed: "已确认",
+      pending: "待处理",
+      revenueBoost: "+30% 收入提升"
     }
   }
 }
