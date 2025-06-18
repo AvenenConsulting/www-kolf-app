@@ -2,18 +2,19 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { Menu, X, Globe, ChevronDown } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Locale } from '@/lib/translations'
 import { trackLanguageSwitch } from '@/lib/analytics'
+import { getPathWithoutLocale } from '@/lib/i18n/detectLanguage'
 
 const languages = [
-  { code: 'en', name: 'English', flag: '🇺🇸' },
-  { code: 'th', name: 'ไทย', flag: '🇹🇭' },
-  { code: 'ko', name: '한국어', flag: '🇰🇷' },
-  { code: 'ja', name: '日本語', flag: '🇯🇵' },
-  { code: 'zh', name: '中文', flag: '🇨🇳' },
+  { code: 'en' as const, name: 'English', flag: '🇺🇸' },
+  { code: 'th' as const, name: 'ไทย', flag: '🇹🇭' },
+  { code: 'ko' as const, name: '한국어', flag: '🇰🇷' },
+  { code: 'ja' as const, name: '日本語', flag: '🇯🇵' },
+  { code: 'zh' as const, name: '中文', flag: '🇨🇳' },
 ]
 
 interface HeaderProps {
@@ -26,6 +27,7 @@ export default function Header({ locale, translations: t }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isLangOpen, setIsLangOpen] = useState(false)
   const pathname = usePathname()
+  const router = useRouter()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,6 +39,18 @@ export default function Header({ locale, translations: t }: HeaderProps) {
 
   const toggleMenu = () => setIsOpen(!isOpen)
   const toggleLanguage = () => setIsLangOpen(!isLangOpen)
+
+  const handleLanguageChange = (newLocale: Locale) => {
+    const pathWithoutLocale = getPathWithoutLocale(pathname)
+    const newPath = `/${newLocale}${pathWithoutLocale}`
+    
+    // Track language change
+    trackLanguageSwitch(locale, newLocale)
+    
+    // Navigate to new path
+    router.push(newPath)
+    setIsLangOpen(false)
+  }
 
   const navItems = [
     { href: '#features', label: t.nav.features },
@@ -110,11 +124,10 @@ export default function Header({ locale, translations: t }: HeaderProps) {
                     className="absolute top-full right-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-200 py-2"
                   >
                     {languages.map((lang) => (
-                      <Link
+                      <button
                         key={lang.code}
-                        href={`/${lang.code}`}
+                        onClick={() => handleLanguageChange(lang.code)}
                         className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                        onClick={() => trackLanguageSwitch(locale, lang.code)}
                       >
                         <div className="flex items-center space-x-3">
                           <span className="text-lg">{lang.flag}</span>
@@ -123,7 +136,7 @@ export default function Header({ locale, translations: t }: HeaderProps) {
                             <div className="ml-auto w-2 h-2 bg-primary-500 rounded-full"></div>
                           )}
                         </div>
-                      </Link>
+                      </button>
                     ))}
                   </motion.div>
                 )}
@@ -174,6 +187,29 @@ export default function Header({ locale, translations: t }: HeaderProps) {
                 ))}
                 <div className="border-t border-gray-200 pt-4 mt-4">
                   <div className="px-4 space-y-2">
+                    {/* Mobile Language Selector */}
+                    <div className="py-2">
+                      <div className="text-sm font-medium text-gray-500 mb-2">Language</div>
+                      <div className="grid grid-cols-2 gap-2">
+                        {languages.map((lang) => (
+                          <button
+                            key={lang.code}
+                            onClick={() => {
+                              handleLanguageChange(lang.code)
+                              setIsOpen(false)
+                            }}
+                            className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm ${
+                              lang.code === locale
+                                ? 'bg-primary-50 text-primary-700'
+                                : 'text-gray-700 hover:bg-gray-50'
+                            }`}
+                          >
+                            <span className="text-lg">{lang.flag}</span>
+                            <span>{lang.name}</span>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
                     <Link
                       href={`/${locale}/login`}
                       className="block text-gray-700 hover:text-primary-600 transition-colors duration-200"
