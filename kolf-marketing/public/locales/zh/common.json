@@ -291,5 +291,14 @@
     "description": "我们使用Cookie来改善您在我们网站上的体验。继续浏览即表示您同意我们使用Cookie。",
     "accept": "全部接受",
     "decline": "拒绝"
+  },
+  "productWindow": {
+    "realtime": "实时更新",
+    "bookings": "今日预订",
+    "revenue": "今日收入",
+    "occupancy": "入住率",
+    "confirmed": "已确认",
+    "pending": "待处理",
+    "revenueBoost": "+30% 收入提升"
   }
 }

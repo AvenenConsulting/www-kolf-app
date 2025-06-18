@@ -291,5 +291,14 @@
     "description": "私たちは、ブラウジング体験を向上させ、サイトトラフィックを分析するためにクッキーを使用しています。「承諾」をクリックすることで、クッキーの使用に同意したことになります。",
     "accept": "承諾",
     "decline": "拒否"
+  },
+  "productWindow": {
+    "realtime": "リアルタイム更新",
+    "bookings": "本日の予約数",
+    "revenue": "本日の売上",
+    "occupancy": "稼働率",
+    "confirmed": "確定",
+    "pending": "保留中",
+    "revenueBoost": "+30% 売上増"
   }
 }

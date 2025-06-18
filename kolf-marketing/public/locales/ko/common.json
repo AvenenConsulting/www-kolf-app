@@ -291,5 +291,14 @@
     "description": "저희는 귀하의 브라우징 경험을 향상시키고 사이트 트래픽을 분석하기 위해 쿠키를 사용합니다. \"수락\"을 클릭하시면 쿠키 사용에 동의하시는 것입니다.",
     "accept": "수락",
     "decline": "거부"
+  },
+  "productWindow": {
+    "realtime": "실시간 업데이트",
+    "bookings": "오늘의 예약",
+    "revenue": "오늘의 매출",
+    "occupancy": "점유율",
+    "confirmed": "확정됨",
+    "pending": "대기 중",
+    "revenueBoost": "+30% 매출 증가"
   }
 }

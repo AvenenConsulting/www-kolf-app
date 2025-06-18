@@ -145,15 +145,15 @@ export default function Hero({ locale, translations: t }: HeroProps) {
                   <div className="grid grid-cols-3 gap-4 mb-6">
                     <div className="bg-primary-50 p-4 rounded-lg">
                       <div className="text-2xl font-bold text-primary-600">247</div>
-                      <div className="text-sm text-gray-600">Today's Bookings</div>
+                      <div className="text-sm text-gray-600">{t.productWindow.bookings}</div>
                     </div>
                     <div className="bg-green-50 p-4 rounded-lg">
                       <div className="text-2xl font-bold text-green-600">฿184K</div>
-                      <div className="text-sm text-gray-600">Daily Revenue</div>
+                      <div className="text-sm text-gray-600">{t.productWindow.revenue}</div>
                     </div>
                     <div className="bg-blue-50 p-4 rounded-lg">
                       <div className="text-2xl font-bold text-blue-600">92%</div>
-                      <div className="text-sm text-gray-600">Occupancy</div>
+                      <div className="text-sm text-gray-600">{t.productWindow.occupancy}</div>
                     </div>
                   </div>
                   {/* Recent Bookings */}
@@ -163,21 +163,21 @@ export default function Hero({ locale, translations: t }: HeroProps) {
                         <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                         <span className="text-sm">Tee Time 08:00 - Group of 4</span>
                       </div>
-                      <span className="text-sm text-gray-500">Confirmed</span>
+                      <span className="text-sm text-gray-500">{t.productWindow.confirmed}</span>
                     </div>
                     <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                       <div className="flex items-center space-x-3">
                         <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
                         <span className="text-sm">Tee Time 08:10 - Group of 2</span>
                       </div>
-                      <span className="text-sm text-gray-500">Pending</span>
+                      <span className="text-sm text-gray-500">{t.productWindow.pending}</span>
                     </div>
                     <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                       <div className="flex items-center space-x-3">
                         <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                         <span className="text-sm">Tee Time 08:20 - Group of 4</span>
                       </div>
-                      <span className="text-sm text-gray-500">Confirmed</span>
+                      <span className="text-sm text-gray-500">{t.productWindow.confirmed}</span>
                     </div>
                   </div>
                 </div>
@@ -192,7 +192,7 @@ export default function Hero({ locale, translations: t }: HeroProps) {
               >
                 <div className="flex items-center space-x-2">
                   <div className="w-3 h-3 bg-primary-500 rounded-full"></div>
-                  <span className="text-sm font-medium">Real-time Updates</span>
+                  <span className="text-sm font-medium">{t.productWindow.realtime}</span>
                 </div>
               </motion.div>
 
@@ -204,7 +204,7 @@ export default function Hero({ locale, translations: t }: HeroProps) {
               >
                 <div className="flex items-center space-x-2">
                   <TrendingUp className="w-4 h-4 text-green-500" />
-                  <span className="text-sm font-medium text-green-600">+30% Revenue</span>
+                  <span className="text-sm font-medium text-green-600">{t.productWindow.revenueBoost}</span>
                 </div>
               </motion.div>
             </div>

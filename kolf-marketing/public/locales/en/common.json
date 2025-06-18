@@ -302,5 +302,14 @@
     "description": "We use cookies to enhance your browsing experience and analyze site traffic. By clicking \"Accept\", you consent to our use of cookies.",
     "accept": "Accept",
     "decline": "Decline"
+  },
+  "productWindow": {
+    "realtime": "Real-time Updates",
+    "bookings": "Today's Bookings",
+    "revenue": "Daily Revenue",
+    "occupancy": "Occupancy",
+    "confirmed": "Confirmed",
+    "pending": "Pending",
+    "revenueBoost": "+30% Revenue"
   }
 }
