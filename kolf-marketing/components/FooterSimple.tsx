@@ -10,11 +10,13 @@ export default function Footer({ locale, translations: t }: FooterProps) {
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto container-padding py-16">
         <div className="text-center mb-8">
-          <div className="flex items-center justify-center space-x-2 mb-4">
-            <div className="w-10 h-10 bg-gradient-to-r from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">K</span>
-            </div>
-            <span className="font-bold text-2xl">KOLF</span>
+          <div className="flex items-center justify-center mb-4">
+            <img 
+              src={`/logo.svg?v=${Date.now()}`}
+              alt="KOLF Logo" 
+              className="h-14 w-14"
+              style={{ height: '56px', width: '56px' }}
+            />
           </div>
           <p className="text-gray-400 max-w-md mx-auto">{t.footer.tagline}</p>
         </div>

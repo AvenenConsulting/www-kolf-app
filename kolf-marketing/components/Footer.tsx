@@ -106,14 +106,13 @@ export default function Footer() {
               transition={{ duration: 0.6 }}
             >
               {/* Logo */}
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">K</span>
-                </div>
-                <div className="flex flex-col">
-                  <span className="font-bold text-2xl text-white">KOLF</span>
-                  <span className="text-sm text-gray-400 -mt-1">by Avenen</span>
-                </div>
+              <div className="flex items-center mb-6">
+                <img 
+                  src={`/logo.svg?v=${Date.now()}`}
+                  alt="KOLF Logo" 
+                  className="h-16 w-16"
+                  style={{ height: '64px', width: '64px' }}
+                />
               </div>
 
               <p className="text-gray-300 mb-6 leading-relaxed">

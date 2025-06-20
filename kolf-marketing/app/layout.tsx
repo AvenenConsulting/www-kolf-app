@@ -67,7 +67,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
-
+  
   return (
     <html lang="en">
       <head>
@@ -101,9 +101,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <PerformanceMonitorClient />
         <ErrorBoundary>
-          <AnalyticsProvider locale="en">
-            {children}
-          </AnalyticsProvider>
+        <AnalyticsProvider locale="en">
+          {children}
+        </AnalyticsProvider>
         </ErrorBoundary>
       </body>
     </html>

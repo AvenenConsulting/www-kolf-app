@@ -13,7 +13,6 @@ AWS_REGION="ap-southeast-1"
 # Build the application
 echo "📦 Building Next.js application..."
 npm run build
-npm run export
 
 # Upload to S3
 echo "📤 Uploading to S3..."

@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Locale } from '@/lib/translations'
 import { trackLanguageSwitch } from '@/lib/analytics'
 import { getPathWithoutLocale } from '@/lib/i18n/detectLanguage'
+import Image from 'next/image'
 
 const languages = [
   { code: 'en' as const, name: 'English', flag: '🇺🇸' },
@@ -75,15 +76,18 @@ export default function Header({ locale, translations: t }: HeaderProps) {
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="flex items-center space-x-2"
+            className="flex items-center space-x-3"
           >
-            <div className="w-10 h-10 bg-gradient-to-r from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">K</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-bold text-xl text-gray-900">KOLF</span>
-              <span className="text-xs text-gray-500 -mt-1">by Avenen</span>
-            </div>
+            <Link href="/" className="flex items-center space-x-2">
+              <Image
+                src={`/logo.svg?v=${Date.now()}`}
+                alt="KOLF Logo"
+                width={40}
+                height={40}
+                className="h-8 w-8 sm:h-10 sm:w-10"
+                priority
+              />
+            </Link>
           </motion.div>
 
           {/* Desktop Navigation */}

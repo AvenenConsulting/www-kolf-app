@@ -5,7 +5,7 @@ export function generateOrganizationSchema() {
     name: 'KOLF',
     alternateName: 'KOLF Golf Management Platform',
     url: 'https://kolf.app',
-    logo: 'https://kolf.app/logo.png',
+    logo: 'https://kolf.app/logo.svg',
     description: 'AI-powered golf management platform built exclusively for Asian markets',
     foundingDate: '2024',
     founders: [

@@ -133,20 +133,20 @@ export default function LeadCaptureModal({
 
       setStatus('success')
       trackEvent('lead_capture', 'conversion', source)
-      
-      // Reset form after delay
-      setTimeout(() => {
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          courseName: '',
-          country: '',
-          message: ''
-        })
-        setStatus('idle')
-        onClose()
-      }, 3000)
+        
+        // Reset form after delay
+        setTimeout(() => {
+          setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            courseName: '',
+            country: '',
+            message: ''
+          })
+          setStatus('idle')
+          onClose()
+        }, 3000)
     } catch (error) {
       console.error('Lead capture error:', error)
       setStatus('error')
