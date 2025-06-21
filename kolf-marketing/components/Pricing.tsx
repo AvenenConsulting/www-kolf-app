@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Check, Star, Zap, Shield, Crown } from 'lucide-react'
+import { getFormspreeUrl } from '@/lib/config'
 
 const plans = [
   {
@@ -112,10 +113,56 @@ const faqs = [
 export default function Pricing() {
   const [isYearly, setIsYearly] = useState(false)
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null)
+  const [isSubmittingCTA, setIsSubmittingCTA] = useState<string | null>(null)
+
+  const handleCTAClick = async (ctaType: string, planName?: string) => {
+    const userEmail = prompt('Please enter your email address to proceed:')
+    if (!userEmail || !userEmail.includes('@')) {
+      alert('Please enter a valid email address.')
+      return
+    }
+
+    setIsSubmittingCTA(ctaType)
+
+    try {
+      const response = await fetch(getFormspreeUrl(), {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: userEmail,
+          source: `pricing_${ctaType.toLowerCase().replace(/\s+/g, '_')}`,
+          planName: planName || 'Not specified',
+          timestamp: new Date().toISOString(),
+          _subject: `New ${ctaType} Request${planName ? ` for ${planName} Plan` : ''}`,
+        }),
+      })
+
+      if (response.ok) {
+        alert(`Thank you! We'll contact you shortly regarding your ${ctaType.toLowerCase()} request.`)
+      } else {
+        throw new Error('Submission failed')
+      }
+    } catch (error) {
+      console.error('Error submitting CTA:', error)
+      alert('Sorry, there was an error. Please try again or use the contact form below.')
+    } finally {
+      setIsSubmittingCTA(null)
+    }
+  }
 
   return (
-    <section id="pricing" className="section-padding bg-gray-50">
-      <div className="max-w-7xl mx-auto container-padding">
+    <section id="pricing" className="section-padding bg-gray-50 relative overflow-hidden">
+      {/* Decorative Background Elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-12 left-12 w-20 h-20 bg-emerald-200/12 rounded-full blur-xl"></div>
+        <div className="absolute bottom-12 right-12 w-28 h-28 bg-yellow-200/12 rounded-full blur-xl"></div>
+        <div className="absolute top-1/2 left-1/4 w-1 h-1 bg-emerald-400 rounded-full opacity-50"></div>
+        <div className="absolute bottom-1/4 right-1/3 w-2 h-2 bg-yellow-400 rounded-full opacity-40"></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto container-padding relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -248,15 +295,24 @@ export default function Pricing() {
 
                 {/* CTA Button */}
                 <motion.button
+                  onClick={() => handleCTAClick(plan.cta, plan.name)}
+                  disabled={isSubmittingCTA === `${plan.cta}_${plan.name}`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
                     plan.popular
                       ? 'bg-primary-600 hover:bg-primary-700 text-white shadow-lg'
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
-                  }`}
+                  } ${isSubmittingCTA === `${plan.cta}_${plan.name}` ? 'opacity-50 cursor-not-allowed' : ''}`}
                 >
-                  {plan.cta}
+                  {isSubmittingCTA === `${plan.cta}_${plan.name}` ? (
+                    <div className="flex items-center justify-center space-x-2">
+                      <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
+                      <span>Processing...</span>
+                    </div>
+                  ) : (
+                    plan.cta
+                  )}
                 </motion.button>
               </div>
             </motion.div>
@@ -396,22 +452,42 @@ export default function Pricing() {
             Start your 14-day free trial today. No credit card required.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <motion.a
-              href="#contact"
+            <motion.button
+              onClick={() => handleCTAClick('Start Free Trial')}
+              disabled={isSubmittingCTA === 'Start Free Trial'}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white text-primary-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 shadow-lg"
+              className={`bg-white text-primary-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 shadow-lg ${
+                isSubmittingCTA === 'Start Free Trial' ? 'opacity-50 cursor-not-allowed' : ''
+              }`}
             >
-              Start Free Trial
-            </motion.a>
-            <motion.a
-              href="#contact"
+              {isSubmittingCTA === 'Start Free Trial' ? (
+                <div className="flex items-center justify-center space-x-2">
+                  <div className="w-4 h-4 border-2 border-primary-600 border-t-transparent rounded-full animate-spin" />
+                  <span>Processing...</span>
+                </div>
+              ) : (
+                'Start Free Trial'
+              )}
+            </motion.button>
+            <motion.button
+              onClick={() => handleCTAClick('Schedule Demo')}
+              disabled={isSubmittingCTA === 'Schedule Demo'}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary-600 font-semibold py-3 px-8 rounded-lg transition-all duration-200"
+              className={`bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary-600 font-semibold py-3 px-8 rounded-lg transition-all duration-200 ${
+                isSubmittingCTA === 'Schedule Demo' ? 'opacity-50 cursor-not-allowed' : ''
+              }`}
             >
-              Schedule Demo
-            </motion.a>
+              {isSubmittingCTA === 'Schedule Demo' ? (
+                <div className="flex items-center justify-center space-x-2">
+                  <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                  <span>Processing...</span>
+                </div>
+              ) : (
+                'Schedule Demo'
+              )}
+            </motion.button>
           </div>
         </motion.div>
       </div>

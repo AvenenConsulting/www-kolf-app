@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { 
@@ -10,8 +11,10 @@ import {
   Linkedin, 
   Youtube, 
   Facebook,
-  ChevronUp
+  ChevronUp,
+  ArrowRight
 } from 'lucide-react'
+import { getFormspreeUrl } from '@/lib/config'
 
 const footerSections = [
   {
@@ -63,31 +66,42 @@ const socialLinks = [
   { icon: Youtube, href: 'https://youtube.com/avenenglobal', label: 'YouTube' }
 ]
 
-const officeLocations = [
-  {
-    city: 'Bangkok',
-    country: 'Thailand',
-    address: '999 Rama IV Road, Silom, Bangkok 10500',
-    phone: '+66 2 123 4567',
-    email: 'thailand@avenen.com'
-  },
-  {
-    city: 'Seoul',
-    country: 'South Korea',
-    address: '123 Gangnam-daero, Gangnam-gu, Seoul',
-    phone: '+82 2 123 4567',
-    email: 'korea@avenen.com'
-  },
-  {
-    city: 'Tokyo',
-    country: 'Japan',
-    address: '1-1-1 Shibuya, Shibuya-ku, Tokyo',
-    phone: '+81 3 1234 5678',
-    email: 'japan@avenen.com'
-  }
-]
+// Contact information removed
 
 export default function Footer() {
+  const [newsletterEmail, setNewsletterEmail] = useState('')
+  const [isSubmittingNewsletter, setIsSubmittingNewsletter] = useState(false)
+  const [newsletterSubmitted, setNewsletterSubmitted] = useState(false)
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmittingNewsletter(true)
+
+    try {
+      const response = await fetch(getFormspreeUrl(), {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: newsletterEmail,
+          source: 'newsletter_signup',
+          timestamp: new Date().toISOString(),
+          _subject: 'New Newsletter Subscription',
+        }),
+      })
+
+      if (response.ok) {
+        setNewsletterSubmitted(true)
+        setNewsletterEmail('')
+      }
+    } catch (error) {
+      console.error('Error submitting newsletter:', error)
+    } finally {
+      setIsSubmittingNewsletter(false)
+    }
+  }
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
@@ -108,31 +122,31 @@ export default function Footer() {
               {/* Logo */}
               <div className="flex items-center mb-6">
                 <img 
-                  src={`/logo.svg?v=${Date.now()}`}
+                  src="/logo-horizontal-light.svg" 
                   alt="KOLF Logo" 
-                  className="h-16 w-16"
-                  style={{ height: '64px', width: '64px' }}
+                  className="h-16 w-auto"
+                  style={{ height: '64px', width: 'auto' }}
                 />
               </div>
 
               <p className="text-gray-300 mb-6 leading-relaxed">
-                The complete golf course management solution for Asia. Purpose-built for Thai golf courses 
-                with mandatory caddie systems, dynamic pricing, and complete operational management.
+                Revolutionary golf course management platform launching in 2025. Join our exclusive pilot program 
+                to help shape the future of golf management in Asia while securing lifetime benefits.
               </p>
 
               {/* Stats */}
               <div className="grid grid-cols-3 gap-6 mb-8">
                 <div>
-                  <div className="text-2xl font-bold text-primary-400">500+</div>
-                  <div className="text-sm text-gray-400">Golf Courses</div>
+                  <div className="text-2xl font-bold text-primary-400">10</div>
+                  <div className="text-sm text-gray-400">Pilot Spots</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-primary-400">1M+</div>
-                  <div className="text-sm text-gray-400">Monthly Bookings</div>
+                  <div className="text-2xl font-bold text-primary-400">2025</div>
+                  <div className="text-sm text-gray-400">Launch Year</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-primary-400">99.9%</div>
-                  <div className="text-sm text-gray-400">Uptime</div>
+                  <div className="text-2xl font-bold text-primary-400">50%</div>
+                  <div className="text-sm text-gray-400">Pilot Discount</div>
                 </div>
               </div>
 
@@ -183,45 +197,7 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* Office Locations */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="border-t border-gray-800 pt-12 mb-12"
-        >
-          <h3 className="text-lg font-semibold text-white mb-8 text-center">
-            Our Offices Across Asia
-          </h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            {officeLocations.map((office, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.02 }}
-                className="bg-gray-800 rounded-lg p-6 text-center"
-              >
-                <h4 className="text-white font-semibold mb-3">
-                  {office.city}, {office.country}
-                </h4>
-                <div className="space-y-2 text-sm text-gray-300">
-                  <div className="flex items-center justify-center space-x-2">
-                    <MapPin className="w-4 h-4" />
-                    <span>{office.address}</span>
-                  </div>
-                  <div className="flex items-center justify-center space-x-2">
-                    <Phone className="w-4 h-4" />
-                    <span>{office.phone}</span>
-                  </div>
-                  <div className="flex items-center justify-center space-x-2">
-                    <Mail className="w-4 h-4" />
-                    <span>{office.email}</span>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+
 
         {/* Newsletter Signup */}
         <motion.div
@@ -238,21 +214,49 @@ export default function Footer() {
             <p className="text-gray-300 mb-6">
               Get the latest updates on new features, golf industry insights, and success stories.
             </p>
-            <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-              />
-              <motion.button
-                type="submit"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
+            {newsletterSubmitted ? (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="text-center py-8"
               >
-                Subscribe
-              </motion.button>
-            </form>
+                <div className="w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <ArrowRight className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">Thanks for subscribing!</h3>
+                <p className="text-gray-300">You'll receive updates about KOLF features and golf industry insights.</p>
+              </motion.div>
+            ) : (
+              <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <input
+                  type="email"
+                  value={newsletterEmail}
+                  onChange={(e) => setNewsletterEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  required
+                  className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                />
+                <motion.button
+                  type="submit"
+                  disabled={isSubmittingNewsletter}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-emerald-600 hover:bg-emerald-700 disabled:bg-emerald-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2"
+                >
+                  {isSubmittingNewsletter ? (
+                    <>
+                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                      Subscribing...
+                    </>
+                  ) : (
+                    <>
+                      Subscribe
+                      <ArrowRight className="w-4 h-4" />
+                    </>
+                  )}
+                </motion.button>
+              </form>
+            )}
           </div>
         </motion.div>
       </div>
@@ -291,29 +295,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Trust Badges */}
-      <div className="bg-gray-800 border-t border-gray-700">
-        <div className="max-w-7xl mx-auto container-padding py-6">
-          <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 text-sm text-gray-400">
-            <div className="flex items-center space-x-2">
-              <div className="w-4 h-4 bg-green-500 rounded-full"></div>
-              <span>SOC 2 Type II Certified</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-4 h-4 bg-blue-500 rounded-full"></div>
-              <span>GDPR Compliant</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-4 h-4 bg-purple-500 rounded-full"></div>
-              <span>PCI DSS Level 1</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-4 h-4 bg-yellow-500 rounded-full"></div>
-              <span>ISO 27001 Certified</span>
-            </div>
-          </div>
-        </div>
-      </div>
+
     </footer>
   )
 }

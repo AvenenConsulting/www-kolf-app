@@ -8,7 +8,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Locale } from '@/lib/translations'
 import { trackLanguageSwitch } from '@/lib/analytics'
 import { getPathWithoutLocale } from '@/lib/i18n/detectLanguage'
-import Image from 'next/image'
 
 const languages = [
   { code: 'en' as const, name: 'English', flag: '🇺🇸' },
@@ -78,16 +77,12 @@ export default function Header({ locale, translations: t }: HeaderProps) {
             whileHover={{ scale: 1.05 }}
             className="flex items-center space-x-3"
           >
-            <Link href="/" className="flex items-center space-x-2">
-              <Image
-                src={`/logo.svg?v=${Date.now()}`}
-                alt="KOLF Logo"
-                width={40}
-                height={40}
-                className="h-8 w-8 sm:h-10 sm:w-10"
-                priority
-              />
-            </Link>
+            <img 
+              src="/logo-horizontal.svg" 
+              alt="KOLF Logo" 
+              className="h-12 w-auto"
+              style={{ height: '48px', width: 'auto' }}
+            />
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -147,9 +142,6 @@ export default function Header({ locale, translations: t }: HeaderProps) {
               </AnimatePresence>
             </div>
 
-            <Link href={`/${locale}/login`} className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200">
-              {t.nav.login}
-            </Link>
             <motion.a
               href="#hero"
               whileHover={{ scale: 1.05 }}
@@ -214,12 +206,6 @@ export default function Header({ locale, translations: t }: HeaderProps) {
                         ))}
                       </div>
                     </div>
-                    <Link
-                      href={`/${locale}/login`}
-                      className="block text-gray-700 hover:text-primary-600 transition-colors duration-200"
-                    >
-                      {t.nav.login}
-                    </Link>
                     <a
                       href="#hero"
                       className="block btn-primary text-center"

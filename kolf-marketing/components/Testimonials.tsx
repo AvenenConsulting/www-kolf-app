@@ -128,8 +128,16 @@ const logos = [
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="section-padding bg-white">
-      <div className="max-w-7xl mx-auto container-padding">
+    <section id="testimonials" className="section-padding bg-white relative overflow-hidden">
+      {/* Decorative Background Elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 left-20 w-24 h-24 bg-emerald-200/10 rounded-full blur-xl"></div>
+        <div className="absolute bottom-20 right-20 w-32 h-32 bg-yellow-200/10 rounded-full blur-xl"></div>
+        <div className="absolute top-1/3 left-1/3 w-1 h-1 bg-emerald-400 rounded-full opacity-40"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-2 h-2 bg-yellow-400 rounded-full opacity-30"></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto container-padding relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

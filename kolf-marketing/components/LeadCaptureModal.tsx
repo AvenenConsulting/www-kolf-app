@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 import { X, Loader2, CheckCircle, AlertCircle } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { trackEvent } from '@/lib/analytics'
+import { getFormspreeUrl } from '@/lib/config'
 
 interface LeadCaptureModalProps {
   isOpen: boolean
@@ -113,7 +114,7 @@ export default function LeadCaptureModal({
     setStatus('loading')
     
     try {
-      const response = await fetch('/api/leads', {
+      const response = await fetch(getFormspreeUrl(), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -122,7 +123,8 @@ export default function LeadCaptureModal({
           ...formData,
           source,
           locale,
-          timestamp: new Date().toISOString()
+          timestamp: new Date().toISOString(),
+          _subject: `New Lead from ${formData.name} - ${formData.courseName}`
         })
       })
 

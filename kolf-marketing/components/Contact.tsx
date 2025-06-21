@@ -14,6 +14,7 @@ import {
   Users,
   Zap
 } from 'lucide-react'
+import { getFormspreeUrl } from '@/lib/config'
 
 const contactOptions = [
   {
@@ -57,35 +58,7 @@ const contactOptions = [
   }
 ]
 
-const officeLocations = [
-  {
-    city: 'Bangkok',
-    country: 'Thailand',
-    address: '999 Rama IV Road, Silom, Bangkok 10500',
-    phone: '+66 2 123 4567',
-    email: 'thailand@avenen.com',
-    timezone: 'GMT+7',
-    languages: ['Thai', 'English']
-  },
-  {
-    city: 'Seoul',
-    country: 'South Korea',
-    address: '123 Gangnam-daero, Gangnam-gu, Seoul',
-    phone: '+82 2 123 4567',
-    email: 'korea@avenen.com',
-    timezone: 'GMT+9',
-    languages: ['Korean', 'English']
-  },
-  {
-    city: 'Tokyo',
-    country: 'Japan',
-    address: '1-1-1 Shibuya, Shibuya-ku, Tokyo',
-    phone: '+81 3 1234 5678',
-    email: 'japan@avenen.com',
-    timezone: 'GMT+9',
-    languages: ['Japanese', 'English']
-  }
-]
+// Office locations removed - contact via form only
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -100,6 +73,7 @@ export default function Contact() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isSubmittingCTA, setIsSubmittingCTA] = useState<string | null>(null)
 
   const courseTypes = [
     '9-hole course',
@@ -126,11 +100,36 @@ export default function Contact() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+    try {
+      // Submit to Formspree
+      const response = await fetch(getFormspreeUrl(), {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: formData.email,
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          phone: formData.phone,
+          company: formData.company,
+          courseType: formData.courseType,
+          interests: formData.interests.join(', '),
+          message: formData.message,
+          source: 'contact_form',
+          timestamp: new Date().toISOString(),
+          _subject: `New Contact Form Submission from ${formData.firstName} ${formData.lastName}`,
+        }),
+      })
+
+      if (response.ok) {
+        setIsSubmitted(true)
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -147,6 +146,46 @@ export default function Contact() {
         ? formData.interests.filter(i => i !== interest)
         : [...formData.interests, interest]
     })
+  }
+
+  const handleCTAClick = async (ctaType: string, email?: string) => {
+    if (!email) {
+      // If no email provided, prompt for one
+      const userEmail = prompt('Please enter your email address to proceed:')
+      if (!userEmail || !userEmail.includes('@')) {
+        alert('Please enter a valid email address.')
+        return
+      }
+      email = userEmail
+    }
+
+    setIsSubmittingCTA(ctaType)
+
+    try {
+      const response = await fetch(getFormspreeUrl(), {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: email,
+          source: ctaType.toLowerCase().replace(/\s+/g, '_'),
+          timestamp: new Date().toISOString(),
+          _subject: `New ${ctaType} Request`,
+        }),
+      })
+
+      if (response.ok) {
+        alert(`Thank you! We'll contact you shortly regarding your ${ctaType.toLowerCase()} request.`)
+      } else {
+        throw new Error('Submission failed')
+      }
+    } catch (error) {
+      console.error('Error submitting CTA:', error)
+      alert('Sorry, there was an error. Please try again or use the contact form below.')
+    } finally {
+      setIsSubmittingCTA(null)
+    }
   }
 
   if (isSubmitted) {
@@ -204,8 +243,16 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="section-padding bg-gradient-to-br from-primary-50 to-white">
-      <div className="max-w-7xl mx-auto container-padding">
+    <section id="contact" className="section-padding bg-gradient-to-br from-emerald-50 to-white relative overflow-hidden">
+      {/* Decorative Background Elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-10 right-10 w-32 h-32 bg-emerald-200/10 rounded-full blur-2xl"></div>
+        <div className="absolute bottom-10 left-10 w-40 h-40 bg-yellow-200/10 rounded-full blur-2xl"></div>
+        <div className="absolute top-1/2 right-1/3 w-2 h-2 bg-emerald-400 rounded-full opacity-30"></div>
+        <div className="absolute bottom-1/3 left-1/4 w-1 h-1 bg-yellow-400 rounded-full opacity-40"></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto container-padding relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -267,15 +314,24 @@ export default function Contact() {
                 ))}
               </div>
               <motion.button
+                onClick={() => handleCTAClick(option.cta)}
+                disabled={isSubmittingCTA === option.cta}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className={`w-full ${
                   option.color === 'primary' ? 'btn-primary' :
                   option.color === 'green' ? 'btn-green' :
                   option.color === 'blue' ? 'btn-blue' : 'btn-gray'
-                }`}
+                } ${isSubmittingCTA === option.cta ? 'opacity-50 cursor-not-allowed' : ''}`}
               >
-                {option.cta}
+                {isSubmittingCTA === option.cta ? (
+                  <div className="flex items-center justify-center space-x-2">
+                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                    <span>Processing...</span>
+                  </div>
+                ) : (
+                  option.cta
+                )}
               </motion.button>
             </motion.div>
           ))}
@@ -456,73 +512,59 @@ export default function Contact() {
           >
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Our Offices Across Asia
+                Get in Touch
               </h3>
               <p className="text-gray-600 mb-8">
-                We have local teams across Asia to provide personalized support in your language and timezone.
+                We're here to help you transform your golf course operations. Submit the form and our team will contact you within 24 hours.
               </p>
             </div>
 
-            {/* Office Locations */}
-            <div className="space-y-6">
-              {officeLocations.map((office, index) => (
-                <motion.div
-                  key={index}
-                  whileHover={{ scale: 1.02 }}
-                  className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 card-hover"
-                >
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-6 h-6 text-primary-600" />
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                        {office.city}, {office.country}
-                      </h4>
-                      <div className="space-y-2 text-sm text-gray-600">
-                        <div className="flex items-center space-x-2">
-                          <MapPin className="w-4 h-4" />
-                          <span>{office.address}</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <Phone className="w-4 h-4" />
-                          <span>{office.phone}</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <Mail className="w-4 h-4" />
-                          <span>{office.email}</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <Clock className="w-4 h-4" />
-                          <span>{office.timezone}</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <Users className="w-4 h-4" />
-                          <span>{office.languages.join(', ')}</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Quick Contact */}
-            <div className="bg-gradient-to-r from-primary-600 to-primary-700 rounded-xl p-8 text-white">
+            {/* Benefits of Contacting Us */}
+            <div className="bg-gradient-to-r from-emerald-600 to-emerald-700 rounded-xl p-8 text-white">
               <h4 className="text-xl font-bold mb-4">
-                Need Immediate Assistance?
+                What You'll Get
               </h4>
-              <p className="text-primary-100 mb-6">
-                Our golf specialists are available 24/7 to answer your questions
-              </p>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-primary-200" />
-                  <span>+66 2 123 4567 (Thailand)</span>
+                  <CheckCircle className="w-5 h-5 text-emerald-200" />
+                  <span>Personalized demo tailored to your golf course</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Mail className="w-5 h-5 text-primary-200" />
-                  <span>sales@avenen.com</span>
+                  <CheckCircle className="w-5 h-5 text-emerald-200" />
+                  <span>Custom pricing and implementation timeline</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-emerald-200" />
+                  <span>ROI analysis based on your current operations</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-emerald-200" />
+                  <span>Support in your local language and timezone</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Trust Indicators */}
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200">
+              <h4 className="text-lg font-semibold text-gray-900 mb-4">
+                Trusted by Golf Professionals
+              </h4>
+              <div className="grid grid-cols-2 gap-4 text-center">
+                <div>
+                  <div className="text-2xl font-bold text-emerald-600">500+</div>
+                  <div className="text-sm text-gray-600">Golf Courses</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-emerald-600">40%</div>
+                  <div className="text-sm text-gray-600">Revenue Increase</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-emerald-600">99.9%</div>
+                  <div className="text-sm text-gray-600">Uptime SLA</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-emerald-600">24/7</div>
+                  <div className="text-sm text-gray-600">Support</div>
                 </div>
               </div>
             </div>

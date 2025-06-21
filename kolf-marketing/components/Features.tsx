@@ -17,278 +17,377 @@ import {
   Zap,
   Shield,
   Settings,
-  CheckCircle
+  CheckCircle,
+  ArrowRight,
+  Sparkles,
+  Target,
+  Award
 } from 'lucide-react'
 
-const featureCategories = [
+const platformHighlights = [
   {
-    title: 'Golf Operations',
-    description: 'Complete operational management built for Asian golf markets',
+    icon: Target,
+    title: "Built for Asia",
+    description: "Designed specifically for Asian golf markets with deep local expertise"
+  },
+  {
+    icon: Zap,
+    title: "Target 40% Revenue Boost",
+    description: "Projected revenue increase through dynamic pricing and optimization"
+  },
+  {
+    icon: Clock,
+    title: "Save 15 Hours Weekly",
+    description: "Projected savings through intelligent automation and streamlined operations"
+  },
+  {
+    icon: Award,
+    title: "Enterprise-Grade Platform",
+    description: "Built for reliability with enterprise-level architecture"
+  }
+]
+
+const coreFeatures = [
+  {
     icon: Calendar,
-    color: 'primary',
-    features: [
-      {
-        icon: Clock,
-        title: 'Smart Tee Time Management',
-        description: 'Real-time booking with 10-minute slots, waitlists, and QR check-in system',
-        highlights: ['Real-time availability', 'Group booking support', 'Mobile-responsive interface']
-      },
-      {
-        icon: UserCheck,
-        title: 'Caddie Management System',
-        description: 'Complete caddie assignment, performance tracking, and commission management',
-        highlights: ['5-star rating system', 'Block caddie assignment', 'Commission calculations']
-      },
-      {
-        icon: Users,
-        title: 'Member Management',
-        description: 'Multi-tier memberships, handicap tracking, and guest privileges',
-        highlights: ['WHS handicap compliance', 'Multiple membership tiers', 'Guest pass management']
-      },
-      {
-        icon: Trophy,
-        title: 'Tournament Platform',
-        description: 'Full tournament lifecycle from registration to live scoring',
-        highlights: ['Multiple tournament formats', 'Live leaderboards', 'Automated prize distribution']
-      }
-    ]
+    title: "Smart Tee Time Engine",
+    description: "Revolutionary booking system with real-time availability, dynamic pricing, and automated waitlist management.",
+    benefits: [
+      "10-minute precision booking slots",
+      "QR code check-in system", 
+      "Weather-based pricing adjustments",
+      "Automated no-show prevention"
+    ],
+    color: "emerald"
   },
   {
-    title: 'Revenue Optimization',
-    description: 'Advanced pricing and financial management to maximize profitability',
+    icon: UserCheck,
+    title: "Caddie Excellence Platform",
+    description: "Complete caddie ecosystem with performance tracking, smart assignments, and commission automation.",
+    benefits: [
+      "5-star rating & feedback system",
+      "Block caddie assignment logic",
+      "Automated commission calculations",
+      "Performance analytics dashboard"
+    ],
+    color: "yellow"
+  },
+  {
     icon: TrendingUp,
-    color: 'green',
-    features: [
-      {
-        icon: Zap,
-        title: 'Dynamic Pricing Engine',
-        description: 'Weather-based, time-based, and demand-based pricing automation',
-        highlights: ['Peak hour pricing', 'Weather adjustments', 'Last-minute deals']
-      },
-      {
-        icon: CreditCard,
-        title: 'Multi-Payment Support',
-        description: 'Credit cards, PromptPay, LINE Pay, and tour operator accounts',
-        highlights: ['Local payment methods', 'Recurring payments', 'Multi-currency support']
-      },
-      {
-        icon: BarChart3,
-        title: 'Business Intelligence',
-        description: 'Real-time dashboards, RevPATT metrics, and predictive analytics',
-        highlights: ['Real-time dashboards', 'Custom reports', 'Predictive analytics']
-      },
-      {
-        icon: Building,
-        title: 'Tour Operator Portal',
-        description: 'Bulk bookings, credit management, and commission tracking',
-        highlights: ['Bulk player upload', 'Credit accounts', 'Commission automation']
-      }
-    ]
+    title: "Revenue Optimization AI",
+    description: "Intelligent pricing engine that maximizes revenue through demand forecasting and market analysis.",
+    benefits: [
+      "Peak hour dynamic pricing",
+      "Weather impact algorithms",
+      "Last-minute deal automation",
+      "RevPATT analytics & insights"
+    ],
+    color: "emerald"
   },
   {
-    title: 'Technology & Integration',
-    description: 'Modern technology stack with seamless integrations',
+    icon: Trophy,
+    title: "Tournament Management Pro",
+    description: "End-to-end tournament platform from registration to live scoring and prize distribution.",
+    benefits: [
+      "Multiple tournament formats",
+      "Live leaderboard updates",
+      "Automated handicap calculations",
+      "Prize distribution automation"
+    ],
+    color: "yellow"
+  },
+  {
     icon: Smartphone,
-    color: 'blue',
-    features: [
-      {
-        icon: Globe,
-        title: 'Multi-Language Support',
-        description: '5 languages with professional translations and cultural considerations',
-        highlights: ['English, Thai, Korean, Japanese, Chinese', 'Cultural UX adaptations', 'Professional translations']
-      },
-      {
-        icon: Smartphone,
-        title: 'Mobile-First Design',
-        description: 'Progressive Web App with native app performance',
-        highlights: ['60% mobile bookings', 'PWA capabilities', 'Offline functionality']
-      },
-      {
-        icon: Settings,
-        title: 'API & Integrations',
-        description: 'RESTful API with webhook support for all features',
-        highlights: ['Complete REST API', 'Webhook support', 'Third-party integrations']
-      },
-      {
-        icon: Shield,
-        title: 'Enterprise Security',
-        description: 'Bank-level security with compliance and audit trails',
-        highlights: ['AES-256 encryption', 'GDPR compliance', 'Complete audit trail']
-      }
-    ]
+    title: "Mobile-First Experience",
+    description: "Progressive Web App delivering native performance with 60% of bookings happening on mobile.",
+    benefits: [
+      "PWA technology for app-like experience",
+      "Offline functionality support",
+      "Lightning-fast load times",
+      "Cross-platform compatibility"
+    ],
+    color: "emerald"
+  },
+  {
+    icon: Globe,
+    title: "Multi-Language Mastery",
+    description: "Professional translations in 5 languages with cultural UX adaptations for each market.",
+    benefits: [
+      "English, Thai, Korean, Japanese, Chinese",
+      "Cultural UI/UX considerations",
+      "Local payment method integrations",
+      "Regional compliance features"
+    ],
+    color: "yellow"
   }
 ]
 
 const stats = [
-  { number: '500+', label: 'Golf Courses', description: 'Across Asia' },
-  { number: '1M+', label: 'Monthly Bookings', description: 'Processed seamlessly' },
-  { number: '99.9%', label: 'Uptime', description: 'Guaranteed SLA' },
-  { number: '30%', label: 'Revenue Increase', description: 'Average improvement' },
-  { number: '80%', label: 'No-show Reduction', description: 'Through automation' },
-  { number: '15hrs', label: 'Time Saved', description: 'Per week per course' }
+  { number: '10', label: 'Pilot Spots Available', sublabel: 'Limited opportunity' },
+  { number: '2025', label: 'Launch Year', sublabel: 'Coming soon' },
+  { number: '50%', label: 'Pilot Discount', sublabel: 'Early adopter pricing' },
+  { number: '40+', label: 'Years Experience', sublabel: 'Golf industry expertise' }
 ]
 
 export default function Features() {
   return (
-    <section id="features" className="section-padding bg-gray-50">
-      <div className="max-w-7xl mx-auto container-padding">
-        {/* Header */}
+    <section id="features" className="section-padding bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+      {/* Decorative Background Elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 left-10 w-32 h-32 bg-emerald-200/8 rounded-full blur-2xl"></div>
+        <div className="absolute bottom-20 right-10 w-40 h-40 bg-yellow-200/8 rounded-full blur-2xl"></div>
+        <div className="absolute top-1/2 left-1/4 w-2 h-2 bg-emerald-400 rounded-full opacity-30"></div>
+        <div className="absolute bottom-1/3 right-1/3 w-1 h-1 bg-yellow-400 rounded-full opacity-40"></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto container-padding relative z-10">
+        {/* Header Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.8 }}
+          className="text-center mb-20"
         >
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-medium mb-6">
-            <Star className="w-4 h-4 mr-2" />
-            Complete Golf Management Solution
-          </div>
-          <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Everything You Need to Run a{' '}
-            <span className="gradient-text">Modern Golf Course</span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Built specifically for Asian golf operations with deep understanding of local requirements
-          </p>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-emerald-100 to-yellow-100 border border-emerald-200 text-emerald-800 text-sm font-semibold mb-8"
+          >
+            <Sparkles className="w-4 h-4 mr-2 text-yellow-600" />
+            Platform Features
+          </motion.div>
+          
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="text-4xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight"
+          >
+            Revolutionizing Golf Management{' '}
+            <span className="relative">
+              <span className="absolute inset-0 bg-gradient-to-r from-emerald-400 to-yellow-400 blur-2xl opacity-30"></span>
+              <span className="relative bg-gradient-to-r from-emerald-600 to-yellow-600 bg-clip-text text-transparent">
+                for Asia
+              </span>
+            </span>
+          </motion.h2>
+          
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed"
+          >
+            Breakthrough technology designed specifically for Asian golf markets, combining deep local expertise with cutting-edge innovation
+          </motion.p>
         </motion.div>
 
-        {/* Stats Grid */}
+        {/* Platform Highlights */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-20"
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-24"
         >
-          {stats.map((stat, index) => (
+          {platformHighlights.map((highlight, index) => (
             <motion.div
               key={index}
-              whileHover={{ scale: 1.05 }}
-              className="bg-white rounded-xl p-6 text-center shadow-lg border border-gray-200 card-hover"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              whileHover={{ scale: 1.05, y: -5 }}
+              className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 text-center group hover:shadow-2xl transition-all duration-300"
             >
-              <div className="text-2xl lg:text-3xl font-bold text-primary-600 mb-2">
-                {stat.number}
+              <div className="w-16 h-16 bg-gradient-to-br from-emerald-100 to-yellow-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                <highlight.icon className="w-8 h-8 text-emerald-600" />
               </div>
-              <div className="text-sm font-semibold text-gray-900 mb-1">
-                {stat.label}
-              </div>
-              <div className="text-xs text-gray-500">
-                {stat.description}
-              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                {highlight.title}
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                {highlight.description}
+              </p>
             </motion.div>
           ))}
         </motion.div>
 
-        {/* Feature Categories */}
-        <div className="space-y-20">
-          {featureCategories.map((category, categoryIndex) => (
-            <motion.div
-              key={categoryIndex}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: categoryIndex * 0.2 }}
-              className="relative"
-            >
-              {/* Category Header */}
-              <div className="text-center mb-12">
-                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl ${
-                  category.color === 'primary' ? 'bg-primary-100' :
-                  category.color === 'green' ? 'bg-green-100' :
-                  category.color === 'blue' ? 'bg-blue-100' : 'bg-gray-100'
-                } mb-6`}>
-                  <category.icon className={`w-8 h-8 ${
-                    category.color === 'primary' ? 'text-primary-600' :
-                    category.color === 'green' ? 'text-green-600' :
-                    category.color === 'blue' ? 'text-blue-600' : 'text-gray-600'
-                  }`} />
-                </div>
-                <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
-                  {category.title}
-                </h3>
-                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                  {category.description}
-                </p>
-              </div>
+        {/* Stats Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="bg-gradient-to-r from-emerald-900 via-emerald-800 to-yellow-900 rounded-3xl p-12 lg:p-16 mb-24 relative overflow-hidden"
+        >
+          {/* Background Pattern */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-10 left-10 w-20 h-20 bg-yellow-400 rounded-full blur-xl"></div>
+            <div className="absolute bottom-10 right-10 w-32 h-32 bg-emerald-400 rounded-full blur-xl"></div>
+          </div>
+          
+          <div className="relative z-10">
+            <div className="text-center mb-12">
+              <h3 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+                Built by Golf Industry Veterans
+              </h3>
+              <p className="text-xl text-emerald-200 max-w-3xl mx-auto">
+                Join our exclusive pilot program and help shape the future of golf management
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="text-4xl lg:text-5xl font-bold text-yellow-400 mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-lg font-semibold text-white mb-1">
+                    {stat.label}
+                  </div>
+                  <div className="text-sm text-emerald-300">
+                    {stat.sublabel}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
 
-              {/* Feature Grid */}
-              <div className="grid md:grid-cols-2 gap-8">
-                {category.features.map((feature, featureIndex) => (
-                  <motion.div
-                    key={featureIndex}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: featureIndex * 0.1 }}
-                    whileHover={{ scale: 1.02 }}
-                    className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 card-hover"
-                  >
-                    <div className="flex items-center mb-4">
-                      <div className={`w-12 h-12 rounded-xl ${
-                        category.color === 'primary' ? 'bg-primary-100' :
-                        category.color === 'green' ? 'bg-green-100' :
-                        category.color === 'blue' ? 'bg-blue-100' : 'bg-gray-100'
-                      } flex items-center justify-center mr-4`}>
-                        <feature.icon className={`w-6 h-6 ${
-                          category.color === 'primary' ? 'text-primary-600' :
-                          category.color === 'green' ? 'text-green-600' :
-                          category.color === 'blue' ? 'text-blue-600' : 'text-gray-600'
+        {/* Core Features Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mb-20"
+        >
+          <div className="text-center mb-16">
+            <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+              Core Platform Capabilities
+            </h3>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Everything you need to modernize your golf course operations and maximize revenue
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-8">
+            {coreFeatures.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ scale: 1.02 }}
+                className="bg-white rounded-3xl p-8 lg:p-10 shadow-xl border border-gray-100 group hover:shadow-2xl transition-all duration-300"
+              >
+                <div className="flex items-center mb-6">
+                  <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mr-6 ${
+                    feature.color === 'emerald' 
+                      ? 'bg-gradient-to-br from-emerald-100 to-emerald-200' 
+                      : 'bg-gradient-to-br from-yellow-100 to-yellow-200'
+                  }`}>
+                    <feature.icon className={`w-8 h-8 ${
+                      feature.color === 'emerald' ? 'text-emerald-600' : 'text-yellow-600'
+                    }`} />
+                  </div>
+                  <div>
+                    <h4 className="text-2xl font-bold text-gray-900 mb-2">
+                      {feature.title}
+                    </h4>
+                  </div>
+                </div>
+                
+                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                  {feature.description}
+                </p>
+                
+                <div className="space-y-4">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <div key={benefitIndex} className="flex items-center space-x-4">
+                      <div className={`w-6 h-6 rounded-full flex items-center justify-center ${
+                        feature.color === 'emerald' 
+                          ? 'bg-emerald-100' 
+                          : 'bg-yellow-100'
+                      }`}>
+                        <CheckCircle className={`w-4 h-4 ${
+                          feature.color === 'emerald' ? 'text-emerald-600' : 'text-yellow-600'
                         }`} />
                       </div>
-                      <h4 className="text-xl font-bold text-gray-900">
-                        {feature.title}
-                      </h4>
+                      <span className="text-gray-700 font-medium">{benefit}</span>
                     </div>
-                    <p className="text-gray-600 mb-6 leading-relaxed">
-                      {feature.description}
-                    </p>
-                    <div className="space-y-2">
-                      {feature.highlights.map((highlight, highlightIndex) => (
-                        <div key={highlightIndex} className="flex items-center space-x-3">
-                          <CheckCircle className="w-4 h-4 text-primary-500 flex-shrink-0" />
-                          <span className="text-sm text-gray-700">{highlight}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
-        </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
 
         {/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mt-20 bg-gradient-to-r from-primary-600 to-primary-700 rounded-2xl p-12 text-white"
+          transition={{ duration: 0.8 }}
+          className="bg-gradient-to-r from-gray-900 via-emerald-900 to-yellow-900 rounded-3xl p-12 lg:p-16 text-center relative overflow-hidden"
         >
-          <h3 className="text-2xl lg:text-3xl font-bold mb-4">
-            Ready to See KOLF in Action?
-          </h3>
-          <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-            Get a personalized demo and see how KOLF can transform your golf course operations
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <motion.a
-              href="#contact"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-white text-primary-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 shadow-lg"
+          {/* Background Elements */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-emerald-400/20 to-yellow-400/20"></div>
+          </div>
+          
+          <div className="relative z-10">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="inline-flex items-center px-6 py-3 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-sm font-semibold mb-8"
             >
-              Schedule Free Demo
-            </motion.a>
-            <motion.a
-              href="#pricing"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary-600 font-semibold py-3 px-8 rounded-lg transition-all duration-200"
-            >
-              View Pricing
-            </motion.a>
+              <Star className="w-4 h-4 mr-2 text-yellow-400" />
+              Ready to Transform Your Golf Course?
+            </motion.div>
+            
+            <h3 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+              See KOLF in Action with a Personalized Demo
+            </h3>
+            <p className="text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
+              Join our pilot program and be part of revolutionizing golf management in Asia
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <motion.a
+                href="#hero"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-semibold rounded-xl transition-all duration-200 shadow-xl"
+              >
+                <span>Apply for Pilot Program</span>
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </motion.a>
+              <motion.a
+                href="#contact"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 font-semibold rounded-xl transition-all duration-200"
+              >
+                Schedule Demo
+              </motion.a>
+            </div>
           </div>
         </motion.div>
       </div>

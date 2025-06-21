@@ -55,3 +55,8 @@ export const trackNewsletterSignup = (success: boolean = true) => {
     'conversion'
   )
 }
+
+// Track email capture for early access
+export const trackEmailCapture = (email: string, source: string, locale: string) => {
+  trackEvent('email_capture', 'conversion', `${source}_${locale}`)
+}
